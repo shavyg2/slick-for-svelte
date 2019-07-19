@@ -1,7 +1,9 @@
 {
   "devDependencies": {
     "@types/jest": "^24.0.15",
+    "history": "^4.9.0",
     "jest": "^24.8.0",
+    "parcel": "^1.12.3",
     "reflect-metadata": "^0.1.13",
     "svelte": "^3.6.7",
     "ts-jest": "^24.0.2",
@@ -17,6 +19,7 @@
     "is-constructor": "^1.0.2",
     "is-promise": "^2.1.0",
     "isobject": "^4.0.0",
+    "query-string": "^6.8.1",
     "route-parser": "^0.0.5",
     "url-join": "^4.0.1",
     "utility-types": "^3.7.0"
@@ -25,5 +28,31 @@
     "history": "^4.9.0",
     "reflect-metadata": "^0.1.13",
     "svelte": "^3.6.7"
-  }
+  },
+  "name": "slick-for-svelte",
+  "version": "1.0.0",
+  "description": "A Framework for Stitching together sick svelte Applications",
+  "main": "dist/slick-for-svelte-factory.js",
+  "scripts": {
+    "test": "echo \"No Test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shavyg2/slick-for-svelte.git"
+  },
+  "keywords": [
+    "Svelte",
+    "Framework",
+    "BootStrap",
+    "decorators",
+    "typescript",
+    "route",
+    "routing"
+  ],
+  "author": "Shavauhn Gabay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shavyg2/slick-for-svelte/issues"
+  },
+  "homepage": "https://github.com/shavyg2/slick-for-svelte#readme"
 }

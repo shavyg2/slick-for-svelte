@@ -1,33 +1,22 @@
 import { Container } from "inversify";
-import { IModuleConfig, CONTROLLER_PATH, VIEW_PATH } from "./decorators/main";
-import history,{History} from "history";
-import { URLSTORE,PARAMSTORE } from "./store/main";
+import { CONTROLLER_PATH, VIEW_PATH } from "./types/constants";
+import { IModuleConfig } from "./types/IModuleConfig";
+import {History} from "history";
+import { URLSTORE,PARAMSTORE,QUERYSTORE } from "./stores/main";
 import RouteParser from "route-parser";
 import urlJoin from "url-join";
+import { RouteDetails } from "./types/RouteDetails";
+import { ViewDetails } from "./types/ViewDetails";
+import { CallInjectedView } from "./framework/CallInjectedView";
+import queryString from "query-string";
 
-export interface ViewDetail{
-    controller:any
-    method: string
-    route: string
-    path: string;
-    url: string
-}
-
-
-
-export interface RouteDetail{
-    controller:any;
-    controller_path:string;
-    view_detail:ViewDetail[];
-}
-
-export class FrontEndSvelte{
+export class SlickApp{
 
     constructor(
         private container:Container,
         private options:IModuleConfig,
         private target:HTMLElement,
-        private baseComponent:any,
+        private base:any,
         private Component404:any,
         private history:History
     ){
@@ -43,34 +32,78 @@ export class FrontEndSvelte{
         const RouteNavigation = this.getViewNavigation(routeDetail);
 
 
-        const UrlCompass:[RouteParser,ViewDetail][] = [] as any;
-
+        let UrlCompass = 
         RouteNavigation.map(navigation=>{
             const search = new RouteParser(navigation.url)
-            UrlCompass.push([search,navigation])
+            return [search,navigation] as const;
         })
 
-        const Application =  new this.baseComponent({
+        const Application =  new this.base({
             target:this.target,
             props:{
                 URLSTORE,
-                PARAMSTORE
+                PARAMSTORE,
+                QUERYSTORE,
+                Direction:"PUSH",
             }
         })
 
-        this.history.listen((location,action)=>{
-            let match 
+        let match:any =-1;
+        URLSTORE.subscribe(async (pageURL)=>{
+
+            
+            if(!match){
+                Application.$set({
+                    URLSTORE,
+                    PARAMSTORE,
+                    NotFound:this.Component404
+                })
+            }else if(match!==-1){
+                let [route,ViewActionDetail] = match;
+                const Controller = await this.container.get(ViewActionDetail.controller)
+           
+                const detail = await CallInjectedView(Controller,ViewActionDetail.method)
+                const props = Object.assign({
+                    URLSTORE,
+                    PARAMSTORE,
+                },detail);
+
+                Application.$set(props);
+            }
+        });
+
+        this.history.listen(async (location,action)=>{
+            const pageURL = urlJoin(location.pathname, location.search,location.hash);
+            QUERYSTORE.update(()=>queryString.parse(location.search));
+            
+            let param:any;
+            match = UrlCompass.find(([route])=>{
+                param = route.match(pageURL)
+                return param;
+            })
+
+            PARAMSTORE.update(()=>param);
+            URLSTORE.update(()=>pageURL)
         })
+
+        
+
+        const init = urlJoin(window.location.pathname,window.location.search)
+        this.history.push(init);
     }
 
     protected get controllers(){
         return (this.options.controllers||[]).map(x=>x);
     }
 
-    private getViewNavigation(routeDetail: RouteDetail[]) {
+    private getViewNavigation(routeDetail: RouteDetails[]) {
+
         const controllerNavigation = routeDetail.map(controllerSettings => {
+
+
             let controller = controllerSettings.controller;
             let route = controllerSettings.controller_path;
+
             let routes = controllerSettings.view_detail.map(viewSettings => {
                 if (!viewSettings) {
                     throw new Error("incorrect view settings, it should never be null");
@@ -85,15 +118,17 @@ export class FrontEndSvelte{
                     url: urlJoin(route, path)
                 };
             });
+
+
             return routes;
         });
+
         const RouteNavigation = controllerNavigation.reduce((a, b) => {
             return b ? [...a, ...b] : a;
-        }, [] as ViewDetail[]);
+        }, [] as ViewDetails[]);
 
         return RouteNavigation
     }
-
     private getControllerRouteDetail(controller:any){
         let controller_path = Reflect.getMetadata(CONTROLLER_PATH,controller);
 
@@ -104,13 +139,13 @@ export class FrontEndSvelte{
                 return {
                     path,
                     method:method as string
-                } as ViewDetail;
+                } as ViewDetails;
             }else{
-                return null as any as ViewDetail;
+                return null as any as ViewDetails;
             }
         }).filter(x=>!!x)
 
-        const routeDetail:RouteDetail =  {
+        const routeDetail:RouteDetails =  {
             controller,
             controller_path,
             view_detail
