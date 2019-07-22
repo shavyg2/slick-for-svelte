@@ -43,7 +43,9 @@ var main_1 = require("./stores/main");
 var route_parser_1 = __importDefault(require("route-parser"));
 var url_join_1 = __importDefault(require("url-join"));
 var CallInjectedView_1 = require("./framework/CallInjectedView");
+var CallInjectedController_1 = require("./framework/CallInjectedController");
 var query_string_1 = __importDefault(require("query-string"));
+var promise_any_1 = __importDefault(require("promise-any"));
 var SlickApp = (function () {
     function SlickApp(container, options, target, base, Component404, history) {
         this.container = container;
@@ -69,12 +71,12 @@ var SlickApp = (function () {
                 URLSTORE: main_1.URLSTORE,
                 PARAMSTORE: main_1.PARAMSTORE,
                 QUERYSTORE: main_1.QUERYSTORE,
-                Direction: "PUSH",
+                viewProps: {}
             }
         });
         var match = -1;
         main_1.URLSTORE.subscribe(function (pageURL) { return __awaiter(_this, void 0, void 0, function () {
-            var route, ViewActionDetail, Controller, detail, props;
+            var ViewActionDetail, controller, Controller, viewProps, templateProps_1, options_1, backup_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -82,25 +84,53 @@ var SlickApp = (function () {
                         Application.$set({
                             URLSTORE: main_1.URLSTORE,
                             PARAMSTORE: main_1.PARAMSTORE,
-                            NotFound: this.Component404
+                            viewProps: {
+                                NotFound: this.Component404
+                            }
                         });
-                        return [3, 4];
+                        return [3, 3];
                     case 1:
-                        if (!(match !== -1)) return [3, 4];
-                        route = match[0], ViewActionDetail = match[1];
-                        return [4, this.container.get(ViewActionDetail.controller)];
+                        if (!(match !== -1)) return [3, 3];
+                        ViewActionDetail = match[1];
+                        controller = ViewActionDetail.controller;
+                        return [4, CallInjectedController_1.CallInjectedController(controller)];
                     case 2:
                         Controller = _a.sent();
-                        return [4, CallInjectedView_1.CallInjectedView(Controller, ViewActionDetail.method)];
-                    case 3:
-                        detail = _a.sent();
-                        props = Object.assign({
+                        viewProps = null;
+                        try {
+                            viewProps = Promise.resolve(CallInjectedView_1.CallInjectedView(Controller, ViewActionDetail.method));
+                        }
+                        catch (e) {
+                            viewProps = Promise.resolve(Promise.reject(e));
+                        }
+                        templateProps_1 = {};
+                        options_1 = Reflect.getMetadata(constants_1.INJECT_OPTIONS, ViewActionDetail.controller) || {};
+                        if (options_1) {
+                            if ("layout" in options_1) {
+                                Object.assign(templateProps_1, { layout: options_1.layout });
+                            }
+                            if ("loading" in options_1) {
+                                Object.assign(templateProps_1, { loading: options_1.loading });
+                            }
+                        }
+                        if ("error" in options_1) {
+                            Object.assign(templateProps_1, { error: options_1.error });
+                        }
+                        Object.assign(templateProps_1, {
                             URLSTORE: main_1.URLSTORE,
-                            PARAMSTORE: main_1.PARAMSTORE,
-                        }, detail);
-                        Application.$set(props);
-                        _a.label = 4;
-                    case 4: return [2];
+                            PARAMSTORE: main_1.PARAMSTORE
+                        });
+                        Object.assign(templateProps_1, { viewProps: viewProps });
+                        backup_1 = Object.assign({}, templateProps_1);
+                        promise_any_1.default([viewProps, new Promise(function (r) { return setTimeout(r, options_1.pause || 400); })])
+                            .then(function () {
+                            Application.$set(templateProps_1);
+                        }).catch(function (e) {
+                            Object.assign(backup_1, { viewProps: Promise.resolve(Promise.reject(e)) });
+                            Application.$set(backup_1);
+                        });
+                        _a.label = 3;
+                    case 3: return [2];
                 }
             });
         }); });
@@ -156,7 +186,8 @@ var SlickApp = (function () {
     };
     SlickApp.prototype.getControllerRouteDetail = function (controller) {
         var controller_path = Reflect.getMetadata(constants_1.CONTROLLER_PATH, controller);
-        var view_detail = Object.entries(controller.prototype).map(function (_a) {
+        var view_detail = Object.entries(controller.prototype)
+            .map(function (_a) {
             var method = _a[0], value = _a[1];
             if (Reflect.hasMetadata(constants_1.VIEW_PATH, controller, method)) {
                 var path = Reflect.getMetadata(constants_1.VIEW_PATH, controller, method);
@@ -168,7 +199,8 @@ var SlickApp = (function () {
             else {
                 return null;
             }
-        }).filter(function (x) { return !!x; });
+        })
+            .filter(function (x) { return !!x; });
         var routeDetail = {
             controller: controller,
             controller_path: controller_path,

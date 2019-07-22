@@ -1,7 +1,4 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
@@ -10,19 +7,19 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = require("inversify");
-var is_promise_1 = __importDefault(require("is-promise"));
 var constants_1 = require("../types/constants");
 var check = __importStar(require("../provider/check"));
+var ContainerBuilder_1 = require("../container/config/ContainerBuilder");
 function Module(config) {
     return function (constructor) {
-        var container = new inversify_1.Container({ defaultScope: 'Singleton' });
+        var builder = new ContainerBuilder_1.ContainerBuilder();
+        var container = ContainerBuilder_1.ContainerBuilder.getContainer(builder);
         Reflect.defineMetadata(constants_1.MODULE_OPTIONS, config, constructor);
         Reflect.defineMetadata(constants_1.MODULE, container, constructor);
         if (config.controllers) {
             config.controllers.forEach(function (controller) {
                 Reflect.defineMetadata(constants_1.MODULE, container, controller);
-                container.bind(controller).toSelf();
+                builder.add(controller);
             });
         }
         if (config.provider) {
@@ -30,39 +27,17 @@ function Module(config) {
                 if (check.IsProvider(provider)) {
                     if (check.isObjectProvider(provider)) {
                         if (check.IsUseClass(provider)) {
-                            container.bind(provider.provide).to(provider.useClass);
+                            builder.bind(provider.provide);
                         }
                         else if (check.IsUseValue(provider)) {
-                            container.bind(provider.provide).toConstantValue(provider.useValue);
+                            builder.bind(provider.provide);
                         }
                         else if (check.IsUseFactory(provider)) {
-                            var factory_1 = provider.useFactory;
-                            var inject_1 = provider.inject || [];
-                            container.bind(provider.provide).toFactory(function (context) {
-                                return function () {
-                                    var container = context.container;
-                                    var dependencies = inject_1.map(function (key, index) {
-                                        if (!container.isBound(key)) {
-                                            throw new Error("container does not know how to create " + factory_1.name + " at index [" + index + "]");
-                                        }
-                                        else {
-                                            return container.get(key);
-                                        }
-                                    });
-                                    if (dependencies.some(is_promise_1.default)) {
-                                        return Promise.all(dependencies.map(function (x) { return Promise.resolve(x); })).then(function (args) {
-                                            return factory_1.apply(void 0, args);
-                                        });
-                                    }
-                                    else {
-                                        return factory_1.apply(void 0, dependencies);
-                                    }
-                                };
-                            });
+                            builder.bind(provider.provide);
                         }
                     }
                     else if (check.IsConstructor(provider)) {
-                        container.bind(provider).toSelf();
+                        builder.bind(provider);
                     }
                     else {
                         throw new Error("incorrectly provided provider");

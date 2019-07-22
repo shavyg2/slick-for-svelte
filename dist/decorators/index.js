@@ -7,4 +7,5 @@ __export(require("./Controller"));
 __export(require("./Injectable"));
 __export(require("./Module"));
 __export(require("./View"));
+__export(require("./inject"));
 //# sourceMappingURL=index.js.map

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var InitModule_1 = require("./decorators/InitModule");
 __export(require("./decorators"));
 __export(require("./stores/main"));
+__export(require("./helpers/createSpa"));
 var SlickForSvelteFactory = (function () {
     function SlickForSvelteFactory() {
     }

@@ -10,6 +10,13 @@ function CallInjectedView(target, key) {
     var constructor = Object.getPrototypeOf(target).constructor;
     var container = Reflect.getMetadata(constants_1.MODULE, constructor);
     var inject = Reflect.getMetadata(constants_1.VIEW, constructor, key);
+    var params = Reflect.getMetadata(constants_1.PARAMETER, constructor, key);
+    if (params) {
+        params.forEach(function (_a) {
+            var index = _a.index, identifier = _a.identifier;
+            inject.splice(index, 1, identifier);
+        });
+    }
     var dependencies = inject.map(function (i, index) {
         if (container.isBound(i)) {
             return container.get(i);

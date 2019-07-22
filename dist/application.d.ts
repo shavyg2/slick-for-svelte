@@ -1,6 +1,6 @@
-import { Container } from "inversify";
 import { IModuleConfig } from "./types/IModuleConfig";
 import { History } from "history";
+import { Container } from "./container/builder/Container";
 export declare class SlickApp {
     private container;
     private options;

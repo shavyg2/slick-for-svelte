@@ -1,10 +1,12 @@
-import { Class } from "utility-types";
-import { injectable } from "inversify";
-import { SERVICE } from "../types/constants";
-export function Injectable() {
-    return (constructor: Class<any>) => {
-        constructor = injectable()(constructor) || constructor;
-        Reflect.defineMetadata(SERVICE, true, constructor);
-        return constructor;
-    };
+import { INJECT_OPTIONS } from "../types/constants";
+import { ScopeOptions } from "../types/ControllerOptions";
+import { SCOPE } from "../container/Provider";
+import { Design } from "../container/builder/design";
+
+export function Injectable(options:ScopeOptions = {scope:SCOPE.Singleton}){
+    return constructor=>{
+        Reflect.defineMetadata(INJECT_OPTIONS,options,constructor);
+        Reflect.defineMetadata(Design.Constructor,Reflect.getMetadata(Design.Parameters,constructor),constructor);
+    }
 }
+

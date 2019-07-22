@@ -1,3 +1,3 @@
-import { Class } from "utility-types";
-export declare function Injectable(): (constructor: Class<any>) => Class<any>;
+import { ScopeOptions } from "../types/ControllerOptions";
+export declare function Injectable(options?: ScopeOptions): (constructor: any) => void;
 //# sourceMappingURL=Injectable.d.ts.map

@@ -1,5 +1,10 @@
 import isPromise from "is-promise";
-import { MODULE, VIEW } from "../types/constants";
+import { MODULE, VIEW, PARAMETER } from "../types/constants";
+
+
+
+
+
 export function CallInjectedView(target: any, key: string) {
 
     let method = target[key];
@@ -7,6 +12,16 @@ export function CallInjectedView(target: any, key: string) {
 
     let container = Reflect.getMetadata(MODULE, constructor);
     let inject: any[] = Reflect.getMetadata(VIEW, constructor, key);
+
+
+    const params = Reflect.getMetadata(PARAMETER,constructor,key);
+    if(params){
+        params.forEach(({index,identifier})=>{
+            inject.splice(index,1,identifier)
+        })
+    }
+
+
     let dependencies = inject.map((i, index) => {
         if (container.isBound(i)) {
             return container.get(i);

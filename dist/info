@@ -1,221 +1,141 @@
 {
   "program": {
     "fileInfos": {
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es5.d.ts": {
-        "version": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88",
-        "signature": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88"
+      "/usr/local/lib/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
+        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts": {
         "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
         "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2016.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2016.d.ts": {
         "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
         "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.d.ts": {
         "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
         "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.d.ts": {
         "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
         "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.d.ts": {
-        "version": "6549045e428b5f483bc82d6e8f6d01a72decd0cb7387f650f365f2210fe10808",
-        "signature": "6549045e428b5f483bc82d6e8f6d01a72decd0cb7387f650f365f2210fe10808"
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.d.ts": {
+        "version": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b",
+        "signature": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.d.ts": {
         "version": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1",
         "signature": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.dom.d.ts": {
-        "version": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376",
-        "signature": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376"
+      "/usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
+        "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.core.d.ts": {
-        "version": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d",
-        "signature": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d"
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
+        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
         "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
         "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
         "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
         "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
-        "version": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4",
-        "signature": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4"
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
+        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
-        "version": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe",
-        "signature": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe"
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
         "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
         "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
         "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
         "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
         "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
         "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
         "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
         "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
         "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
         "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.object.d.ts": {
         "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
         "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
         "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
         "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.string.d.ts": {
         "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
         "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
         "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
         "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
         "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
         "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
         "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
         "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
         "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
         "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
         "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
         "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
         "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
         "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.array.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.array.d.ts": {
         "version": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b",
         "signature": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.string.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.object.d.ts": {
+        "version": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859",
+        "signature": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859"
+      },
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.string.d.ts": {
         "version": "669427ac10ef9f52b6a7a502a66670eaabba675e0a660eb971041bd73c9894e3",
         "signature": "669427ac10ef9f52b6a7a502a66670eaabba675e0a660eb971041bd73c9894e3"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
         "version": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62",
         "signature": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
         "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
         "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
       },
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
         "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
         "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
       },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts": {
-        "version": "c98b36b82116158009016edf9c62702376e5237509e57756ad7962378b5c8219",
-        "signature": "c98b36b82116158009016edf9c62702376e5237509e57756ad7962378b5c8219"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts": {
-        "version": "d11391e1bb784434d588ed7b5be1ec9d75954d028f81d9982a275dc2da23a5e3",
-        "signature": "d11391e1bb784434d588ed7b5be1ec9d75954d028f81d9982a275dc2da23a5e3"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": {
-        "version": "a4efbe32febca65f333dea2f7f128aec72a3dc68ad197c64f7aae50748e276e3",
-        "signature": "a4efbe32febca65f333dea2f7f128aec72a3dc68ad197c64f7aae50748e276e3"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": {
-        "version": "223c30250c2d0774405136fe412f0c654acbd1f5ebc80d711d0a4413ced11520",
-        "signature": "223c30250c2d0774405136fe412f0c654acbd1f5ebc80d711d0a4413ced11520"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": {
-        "version": "d21addb8e9f07e85fe34b65dd38d156b2d29491585eb3a2d3754c85ff024dc78",
-        "signature": "d21addb8e9f07e85fe34b65dd38d156b2d29491585eb3a2d3754c85ff024dc78"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts": {
-        "version": "45f14437278936644e7aa944a9d7b3213cc74173a9d0a6e78994de43caccb6d7",
-        "signature": "45f14437278936644e7aa944a9d7b3213cc74173a9d0a6e78994de43caccb6d7"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts": {
-        "version": "43769897ae7ca754acaffec5dfb909d10510fb2be0d0afa5cb4eec91b4c9805a",
-        "signature": "43769897ae7ca754acaffec5dfb909d10510fb2be0d0afa5cb4eec91b4c9805a"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts": {
-        "version": "188fd1724740c445a782b9e953879097edef90434ff76fdc420acfbd58b1bcf6",
-        "signature": "188fd1724740c445a782b9e953879097edef90434ff76fdc420acfbd58b1bcf6"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": {
-        "version": "be247d709bbc82e84d49fff67267edae8fd0555fa5bfae033ef54f4b4e943257",
-        "signature": "be247d709bbc82e84d49fff67267edae8fd0555fa5bfae033ef54f4b4e943257"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts": {
-        "version": "f81c99df7c78e3ad3b6eacbaa5d5a2d36bcab1ea029b1998ede9151861502a9d",
-        "signature": "f81c99df7c78e3ad3b6eacbaa5d5a2d36bcab1ea029b1998ede9151861502a9d"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts": {
-        "version": "9fd895b4e65cc84529969de404b2221a95a955a57544febdc76189689696b040",
-        "signature": "9fd895b4e65cc84529969de404b2221a95a955a57544febdc76189689696b040"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": {
-        "version": "c656a8d0be8f60c6818d5c60ec56fbe61de252cffb98b760dc0ba5518e85b86a",
-        "signature": "c656a8d0be8f60c6818d5c60ec56fbe61de252cffb98b760dc0ba5518e85b86a"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts": {
-        "version": "1f0a68bc4e44a72d2e3ce81967f6001df5d29428549b310054df0fa1bf588203",
-        "signature": "1f0a68bc4e44a72d2e3ce81967f6001df5d29428549b310054df0fa1bf588203"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts": {
-        "version": "d9df733eeb4fc5ca64d6dfcaa3efc429a9fa7d183ce796df0e5049c1acd1eaa7",
-        "signature": "d9df733eeb4fc5ca64d6dfcaa3efc429a9fa7d183ce796df0e5049c1acd1eaa7"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": {
-        "version": "617d9598bd1dbc6b4e19ebabc5564b3fb9a95589f52eefb4c04396f292f7d1ef",
-        "signature": "617d9598bd1dbc6b4e19ebabc5564b3fb9a95589f52eefb4c04396f292f7d1ef"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts": {
-        "version": "c624c0d0d777a670e2b2d8003ec91519e93048963a3236aeab1ec55a8529c382",
-        "signature": "c624c0d0d777a670e2b2d8003ec91519e93048963a3236aeab1ec55a8529c382"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": {
-        "version": "5436e41fb86218a81a15f6517dc47736924b4a31d1b04a2ca4405556a7bdd303",
-        "signature": "5436e41fb86218a81a15f6517dc47736924b4a31d1b04a2ca4405556a7bdd303"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": {
-        "version": "eec69fe455763bd083965e77e212d062b34ed639e52bd1a1e8d9451339d2c376",
-        "signature": "eec69fe455763bd083965e77e212d062b34ed639e52bd1a1e8d9451339d2c376"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": {
-        "version": "21a9fdf5ec213b187243a4fee33cce7055a0e25dd2ab6fd5eb53d9063bda1297",
-        "signature": "21a9fdf5ec213b187243a4fee33cce7055a0e25dd2ab6fd5eb53d9063bda1297"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": {
-        "version": "9993d27e96163b993a61806d42ca09f492ab72c2ece18bf59b8ae08caafcb262",
-        "signature": "9993d27e96163b993a61806d42ca09f492ab72c2ece18bf59b8ae08caafcb262"
-      },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts": {
-        "version": "f15dd6db666e773db7ae7eba550607eeede04d16819dc7a5abf546f15a4b989a",
-        "signature": "f15dd6db666e773db7ae7eba550607eeede04d16819dc7a5abf546f15a4b989a"
-      },
       "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts": {
-        "version": "a93862466c1011ae6dd634e4212d71d11e8970c0f18d356e951b7362c6754de2",
-        "signature": "eb3b94d1d1727ec3fbf3d83317da603d8fed0655725bf429a146ad748a73da73"
+        "version": "2c338fc290617866f33ebe77516ef68e60210c99782d1ace64a237d1d89f257d",
+        "signature": "e8e6fbd0a923fd632eb6328219f9adf40da1cd99a7588b66ff64770daf0792a9"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts": {
         "version": "2db55ef35459bc536da5c81c70f27e25313c42ab822170f0f3b2fda0d2dc21c0",
@@ -354,16 +274,32 @@
         "signature": "f1ca6819d5d8c64196d85a90aa53b201f5b32dbebf7aaac29acb0106c72c1306"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedview.ts": {
-        "version": "9d99e7a7c6176bc0f4f690291ca825ecc54ee1ab9cb1665ea7ff4dbbb6d559e4",
-        "signature": "b4085dcf49d6bd273d5b0f16cbb6fb7500b16a93c9d66f750e61c7b487ca7a19"
+        "version": "5da1baa9bc8eb1784467297dfdf62e0ed05c24b5dcf15bc6801a1e172e120293",
+        "signature": "7cea7780215ec0639eed52cd69087b58ecdb05073cdc62a6e539d5feefcc6a66"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts": {
+        "version": "d96cc816759bd67bbe50584e6087cc731793fb2897e59d60a4418cb8d816f813",
+        "signature": "938943d8dddb3092430a268344ff5383b2712edc1b39254a3a0c1fa2126cff75"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/icontainer.ts": {
+        "version": "5509b1120d4dee5bb6045b5f9602d278ec2ad45fd72bb57da9129967cab7747b",
+        "signature": "576da669da193ae03cce64d9cf1bdb53968117698d4d9f487b5325ea737e5b6f"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts": {
+        "version": "b103563a3cc4136e4fdf2ce08f836eae749b9e182aaee0cf753e0151bd569b1d",
+        "signature": "c9bb1cac1b6a5313d92f27b82272e7babc4d3c8b335512bb08982c2394db9d51"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedcontroller.ts": {
+        "version": "23853396ae7567b0386f1b07d6158485d141d687abd717a52489f38000ca9273",
+        "signature": "ce5fc456857eb0991a8276b83301f4d3ff85bb5e1caeb1bb3cbc2e8c6ed7bb70"
       },
       "/users/testaccount/code/web/slick-for-svelte/node_modules/query-string/index.d.ts": {
         "version": "fa80e3d39f6c746668fbc7533669895fe1139ce863bbe7463e694f1cbf3b105e",
         "signature": "fa80e3d39f6c746668fbc7533669895fe1139ce863bbe7463e694f1cbf3b105e"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/application.ts": {
-        "version": "3a736570c837980da0bc1ee2b1591e40d7635d8f52cf98e2c4cfc0f7a79cbd84",
-        "signature": "bde7f3f67193b7fd284ce035818f60953e48873c3da513bce1d8415bce38a866"
+        "version": "360bf1b7863bba6ae87d0b299aa74f77d049860e66e5fb67ed35f4d335fa4311",
+        "signature": "2b5aa7a0af28da6162288a98ececf032c4d74dad04967f3f4c298937513ff11a"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts": {
         "version": "3fe5d247c3547802a230ec6a559944a8beafd9c0206043d1618f4d9ed2be78ac",
@@ -389,13 +325,105 @@
         "version": "a8758dc0d958ee44470e0826e13db9b3bc523fc635e01970bdf4101bf5ef5b9f",
         "signature": "a8758dc0d958ee44470e0826e13db9b3bc523fc635e01970bdf4101bf5ef5b9f"
       },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts": {
+        "version": "c98b36b82116158009016edf9c62702376e5237509e57756ad7962378b5c8219",
+        "signature": "c98b36b82116158009016edf9c62702376e5237509e57756ad7962378b5c8219"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts": {
+        "version": "d11391e1bb784434d588ed7b5be1ec9d75954d028f81d9982a275dc2da23a5e3",
+        "signature": "d11391e1bb784434d588ed7b5be1ec9d75954d028f81d9982a275dc2da23a5e3"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": {
+        "version": "a4efbe32febca65f333dea2f7f128aec72a3dc68ad197c64f7aae50748e276e3",
+        "signature": "a4efbe32febca65f333dea2f7f128aec72a3dc68ad197c64f7aae50748e276e3"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": {
+        "version": "223c30250c2d0774405136fe412f0c654acbd1f5ebc80d711d0a4413ced11520",
+        "signature": "223c30250c2d0774405136fe412f0c654acbd1f5ebc80d711d0a4413ced11520"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": {
+        "version": "d21addb8e9f07e85fe34b65dd38d156b2d29491585eb3a2d3754c85ff024dc78",
+        "signature": "d21addb8e9f07e85fe34b65dd38d156b2d29491585eb3a2d3754c85ff024dc78"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts": {
+        "version": "45f14437278936644e7aa944a9d7b3213cc74173a9d0a6e78994de43caccb6d7",
+        "signature": "45f14437278936644e7aa944a9d7b3213cc74173a9d0a6e78994de43caccb6d7"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts": {
+        "version": "43769897ae7ca754acaffec5dfb909d10510fb2be0d0afa5cb4eec91b4c9805a",
+        "signature": "43769897ae7ca754acaffec5dfb909d10510fb2be0d0afa5cb4eec91b4c9805a"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts": {
+        "version": "188fd1724740c445a782b9e953879097edef90434ff76fdc420acfbd58b1bcf6",
+        "signature": "188fd1724740c445a782b9e953879097edef90434ff76fdc420acfbd58b1bcf6"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": {
+        "version": "be247d709bbc82e84d49fff67267edae8fd0555fa5bfae033ef54f4b4e943257",
+        "signature": "be247d709bbc82e84d49fff67267edae8fd0555fa5bfae033ef54f4b4e943257"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts": {
+        "version": "f81c99df7c78e3ad3b6eacbaa5d5a2d36bcab1ea029b1998ede9151861502a9d",
+        "signature": "f81c99df7c78e3ad3b6eacbaa5d5a2d36bcab1ea029b1998ede9151861502a9d"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts": {
+        "version": "9fd895b4e65cc84529969de404b2221a95a955a57544febdc76189689696b040",
+        "signature": "9fd895b4e65cc84529969de404b2221a95a955a57544febdc76189689696b040"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": {
+        "version": "c656a8d0be8f60c6818d5c60ec56fbe61de252cffb98b760dc0ba5518e85b86a",
+        "signature": "c656a8d0be8f60c6818d5c60ec56fbe61de252cffb98b760dc0ba5518e85b86a"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts": {
+        "version": "1f0a68bc4e44a72d2e3ce81967f6001df5d29428549b310054df0fa1bf588203",
+        "signature": "1f0a68bc4e44a72d2e3ce81967f6001df5d29428549b310054df0fa1bf588203"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts": {
+        "version": "d9df733eeb4fc5ca64d6dfcaa3efc429a9fa7d183ce796df0e5049c1acd1eaa7",
+        "signature": "d9df733eeb4fc5ca64d6dfcaa3efc429a9fa7d183ce796df0e5049c1acd1eaa7"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": {
+        "version": "617d9598bd1dbc6b4e19ebabc5564b3fb9a95589f52eefb4c04396f292f7d1ef",
+        "signature": "617d9598bd1dbc6b4e19ebabc5564b3fb9a95589f52eefb4c04396f292f7d1ef"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts": {
+        "version": "c624c0d0d777a670e2b2d8003ec91519e93048963a3236aeab1ec55a8529c382",
+        "signature": "c624c0d0d777a670e2b2d8003ec91519e93048963a3236aeab1ec55a8529c382"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": {
+        "version": "5436e41fb86218a81a15f6517dc47736924b4a31d1b04a2ca4405556a7bdd303",
+        "signature": "5436e41fb86218a81a15f6517dc47736924b4a31d1b04a2ca4405556a7bdd303"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": {
+        "version": "eec69fe455763bd083965e77e212d062b34ed639e52bd1a1e8d9451339d2c376",
+        "signature": "eec69fe455763bd083965e77e212d062b34ed639e52bd1a1e8d9451339d2c376"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": {
+        "version": "21a9fdf5ec213b187243a4fee33cce7055a0e25dd2ab6fd5eb53d9063bda1297",
+        "signature": "21a9fdf5ec213b187243a4fee33cce7055a0e25dd2ab6fd5eb53d9063bda1297"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": {
+        "version": "9993d27e96163b993a61806d42ca09f492ab72c2ece18bf59b8ae08caafcb262",
+        "signature": "9993d27e96163b993a61806d42ca09f492ab72c2ece18bf59b8ae08caafcb262"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts": {
+        "version": "f15dd6db666e773db7ae7eba550607eeede04d16819dc7a5abf546f15a4b989a",
+        "signature": "f15dd6db666e773db7ae7eba550607eeede04d16819dc7a5abf546f15a4b989a"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts": {
+        "version": "7421ebe9ceb30af3a0142c0aa224544b9b07aaedcf436291f6f6f6655bb84eec",
+        "signature": "a92e261867cb5368ac9b10c62e533a55c06e29ddb4882a413d324307deb0a64c"
+      },
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts": {
-        "version": "b7cbd5f3de5561fb80b1ebdc1d34d48021ba61688f5311d76902f2291a6ad3e1",
-        "signature": "02d9c57da8f930202adb671dbee0813e03d120ad517db62d08e426e95dd54772"
+        "version": "930eb52918f562f1067507184a13fc7810e6d2a7ff525736be78a7bfb9614d1e",
+        "signature": "d54d5de9e092c1938dcebfaf62b4a8924ac0c1f0bb20990f855e6b6918c332cb"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/design.ts": {
+        "version": "3ed853b1904733a657b4c662bda14a1e803a4a1f5c55942eb67ed9f91f3596f3",
+        "signature": "6034e3867b538083438ad133358000e9e3edb0d6e07253e8b90d222fd1bef2ba"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts": {
-        "version": "34188b67bd6e53ac825c3bdd278071e8cd5048d53d1c7f75f02b93fea9d1b4a6",
-        "signature": "6e0272b8fedb766c19d16aed636aa848f5476f2629abfae3cd9fd6aa802e12a7"
+        "version": "26ee992fc85f3edfac0789c51646488ac6784bb83499d286b238cff2c2349aff",
+        "signature": "3ef02aebb05e0ca0a884c1015130afbe40ec684f03d456d3043c426609940da5"
       },
       "/users/testaccount/code/web/slick-for-svelte/node_modules/isobject/index.d.ts": {
         "version": "b65c1a7e4cf317a02461ba3b2b5161141ca10288b89f822f7f7f3154277e0769",
@@ -405,29 +433,81 @@
         "version": "253043dacb9f6f7dceabd1b0a5f0dadd69ef7c6e96cb8b337acae07bebfa5b18",
         "signature": "139dd77eaf9667c63023f48f16bb2f418eac0c50464aac5e6680b0175e49f63d"
       },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/icontainerbuilder.ts": {
+        "version": "93e4743f666998792935d4f119b4f3ebc9a5f15ce29937591a48224fea99bb18",
+        "signature": "234d0a1cde9c94c99502b96a13acac905094d1047d247a3a50b0817354000743"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/iconstructor.ts": {
+        "version": "618082f9f98106b2b6eb7082e368d6eb61c9407bbfddefac2adf4f6b7dd9b7f2",
+        "signature": "22e8d721af2dbc1d5dc3983c261ca7b8acaaf23548fa051223961af19d2234ff"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromconstructor.ts": {
+        "version": "7db9273b245e928d3027492c4ed29d33ce1ef6b9812216f708594d54860887fa",
+        "signature": "397d824ccd7cabe09e7384ac4f6e6e1468b6997a2d6c9901a96d524d61443c55"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromvalue.ts": {
+        "version": "6dfb6692939210a7ba97cad864ec9ac9c74badd1c0cc70c30ab6a4562a6682f9",
+        "signature": "2c0e48c92f366d94ee1dfac0208ed54377c27c03ee1b84303b8bdfdcca3a16e9"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts": {
+        "version": "dac857f0f0abad6c65fcb11b7b7772f58108f0599dc5fbd509b83ca42175e192",
+        "signature": "9f8b992684179b960bcda28abc4366f7f8bec1e0d34250006246d47cccec20e9"
+      },
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts": {
-        "version": "88737bf1eb3b30c55696ccb203cda10c7e277c6ef6ef123729a77a3f949dd120",
-        "signature": "a85bc4b6a9a40e4e0b096c0c9c677546ca12dbc8739d42863bf9c714fdb8e8a2"
+        "version": "dd840b6c9ef28a962485aea348cd4c8b57726ebba5b00e2f81895b32de6aba4b",
+        "signature": "558a54dd0fd3a14bc4acb98a9b9e5e85a975f3d983b1e5709a93883d45e8f407"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts": {
-        "version": "d6490c0e0a0adf9ca74f7b4eb215d8ec715b04f3cbdb15f8edf465aa8d1f9698",
-        "signature": "484735e7fc563c04c3a038017063c25fa46f541995e27770eea6f0b4c63f4ae7"
+        "version": "df55c57626747149ac245c271d9a505bcde13e944018cf78cb9fda6b2e2f0be4",
+        "signature": "fe83fd9d0938bc2adf3e6586e6cefdc9425fed8acecdc8f6451f50c67eb1628a"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/inject.ts": {
+        "version": "e258518f9e3ecd717d7a32577f554ee88721c621ffb4b18af100888751985ddf",
+        "signature": "2f13959c1e0214bd15f54a8cca64f2e3e08517b9e5580fff33719e2247fb0d63"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts": {
-        "version": "ead41a2007bdb36dedb5dafccc24a5f9a0e3604c7009474be92194981ae040c0",
-        "signature": "2a4f74feda49b2907687bd5bfc45cca8292bc47cd62e2ebc8b453cdcbf6cf0a7"
+        "version": "9e663f2ee1d508d276cafde3f0c733eb2ed4dc8c5042de131805856386689736",
+        "signature": "c6698e9ac0d9897c0b2f5dceb9e9d47b82b8c5719891fa82c4a3da37da2fd082"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/is-absolute-url/index.d.ts": {
+        "version": "179bcd5d8e064db135741861ecc8a06cd31f92c8429c48eb2ba54d5d1b11defe",
+        "signature": "179bcd5d8e064db135741861ecc8a06cd31f92c8429c48eb2ba54d5d1b11defe"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts": {
+        "version": "bbdfa190c88071a751f767ead9d1cd05a6c48c8e483ca8c71d13b88558924bb6",
+        "signature": "192883f530324d573ad5727b062cbd066e9081fbbee2063b508bb1ba9028866e"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/slick-for-svelte-factory.ts": {
-        "version": "93b5f58ae040e6510a4c9e2ffc307699cebd6c84d4efbfbc2a65d81a9b0ba57b",
-        "signature": "5458eeb135bfe40d8f71a526a82a5bbf912e4d65b8c3a54a704809a2eb347b69"
+        "version": "33dba48e102362dbd14871856ab253c08e482dc40496375d346a9c068fa12284",
+        "signature": "87676981ffd00a8da2183f08f45c9d20e91a2c96ec8d1fa9b0544697254cb5c2"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts": {
+        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/src/container/test/ioc.spec.ts": {
+        "version": "d1d05884d2bb2a19006c2ff9a5212d063c560b7ed51604eb3a74ecd5545f05db",
+        "signature": "b62279f94a0413475b0d839cf2d071871b32971c82bb91369c909105cf67292e"
       },
       "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts": {
         "version": "1aa920829c270c8ccc3a451613b280f7995d6465a97b053051e11b82007a249b",
         "signature": "1eb2771a2c79e39100724b5f680f6109ebf67b6f5288c8da5caddc0df08e9bf6"
       },
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts": {
-        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
-        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest-diff/index.d.ts": {
+        "version": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06",
+        "signature": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/types.d.ts": {
+        "version": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7",
+        "signature": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts": {
+        "version": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17",
+        "signature": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17"
+      },
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest/index.d.ts": {
+        "version": "0b2687f2819f7f50d1f2082900afb0ec9d265ae4b825135beef222f8e16b2c7e",
+        "signature": "0b2687f2819f7f50d1f2082900afb0ec9d265ae4b825135beef222f8e16b2c7e"
       }
     },
     "options": {
@@ -444,9 +524,10 @@
       "outDir": "/Users/testaccount/code/web/slick-for-svelte/dist",
       "tsBuildInfoFile": "/Users/testaccount/code/web/slick-for-svelte/dist/info",
       "removeComments": true,
-      "strict": true,
+      "strict": false,
       "types": [
-        "./node_modules/reflect-metadata"
+        "./node_modules/reflect-metadata",
+        "./node_modules/@types/jest"
       ],
       "esModuleInterop": true,
       "experimentalDecorators": true,
@@ -455,58 +536,6 @@
       "configFilePath": "/Users/testaccount/code/web/slick-for-svelte/tsconfig.json"
     },
     "referencedMap": {
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts"
-      ],
       "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/createbrowserhistory.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
@@ -577,8 +606,16 @@
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
       ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/icontainer.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedcontroller.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts"
+      ],
       "/users/testaccount/code/web/slick-for-svelte/src/application.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
@@ -588,7 +625,9 @@
         "/users/testaccount/code/web/slick-for-svelte/src/types/routedetails.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/types/viewdetails.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedview.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/query-string/index.d.ts"
+        "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedcontroller.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/query-string/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
@@ -607,50 +646,36 @@
         "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/mapped-types.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/functional-helpers.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/isobject/index.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/slick-for-svelte-factory.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/stores/main.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts"
-      ]
-    },
-    "exportedModulesMap": {
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts"
+      ],
       "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts",
@@ -673,74 +698,110 @@
         "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts"
       ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/design.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/isobject/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromconstructor.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/design.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/iconstructor.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromvalue.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/icontainerbuilder.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromconstructor.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromvalue.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts"
+      ],
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts"
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/inject.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts": [
         "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts"
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/inject.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/url-join/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/is-absolute-url/index.d.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/src/slick-for-svelte-factory.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts",
         "/users/testaccount/code/web/slick-for-svelte/src/stores/main.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts"
+        "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/src/application.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/src/container/test/ioc.spec.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/application.ts"
+        "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
-        "/users/testaccount/code/web/slick-for-svelte/src/application.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/types.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
-      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest/index.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest-diff/index.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
       "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/createbrowserhistory.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/createhashhistory.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/creatememoryhistory.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/locationutils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/pathutils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/createbrowserhistory.d.ts",
@@ -749,22 +810,15 @@
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/locationutils.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/pathutils.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/animations.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/utils.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/animate/index.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/pathutils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/ssr.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/store/index.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/locationutils.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/creatememoryhistory.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/createhashhistory.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/transitions.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/transition/index.d.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/index.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/animations.d.ts",
@@ -794,82 +848,172 @@
       "/users/testaccount/code/web/slick-for-svelte/src/stores/main.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/store/index.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/ssr.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/store/index.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/animations.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/utils.d.ts",
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/animate/index.d.ts"
-      ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/internal/transitions.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/svelte/types/runtime/transition/index.d.ts"
-      ],
       "/users/testaccount/code/web/slick-for-svelte/src/types/routedetails.ts": [
         "/users/testaccount/code/web/slick-for-svelte/src/types/viewdetails.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/icontainer.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/application.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/application.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/utility-types.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/mapped-types.d.ts"
       ],
       "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts": [
         "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/utility-types.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/mapped-types.d.ts",
         "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/functional-helpers.d.ts"
       ],
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/utility-types.d.ts": [
-        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/mapped-types.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromconstructor.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/iconstructor.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromvalue.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/container/config/icontainerbuilder.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/inject.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/slick-for-svelte-factory.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/stores/main.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/container/test/ioc.spec.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
+        "/users/testaccount/code/web/slick-for-svelte/src/application.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/types.d.ts"
+      ],
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest/index.d.ts": [
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts",
+        "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest-diff/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es5.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2016.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.dom.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.core.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.object.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.string.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.intl.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.promise.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.array.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.string.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.intl.d.ts",
-      "/users/testaccount/.nvm/versions/node/v10.1.0/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es5.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2016.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "/usr/local/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/types/constants.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/types/imoduleconfig.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/history/domutils.d.ts",
@@ -906,25 +1050,65 @@
       "/users/testaccount/code/web/slick-for-svelte/src/types/routedetails.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/is-promise/index.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedview.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/provider.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/icontainer.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/container.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/framework/callinjectedcontroller.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/query-string/index.d.ts",
-      "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/types/moduleinitoptions.ts",
-      "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/mapped-types.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/utility-types.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/functional-helpers.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/utility-types/dist/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/metadata_keys.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/interfaces/interfaces.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/constants/literal_types.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/container/container_module.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/injectable.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/tagged.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/named.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/inject.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/optional.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/unmanaged.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/multi_inject.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/target_name.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/post_construct.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/planning/metadata_reader.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/id.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/annotation/decorator_utils.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/syntax/constraint_helpers.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/serialization.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/utils/binding_utils.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/inversify/dts/inversify.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/types/controlleroptions.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/controller.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/design.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/injectable.ts",
       "/users/testaccount/code/web/slick-for-svelte/node_modules/isobject/index.d.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/provider/check.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/icontainerbuilder.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/builder/iconstructor.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromconstructor.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/providerfromvalue.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/config/containerbuilder.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/module.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/view.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/inject.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/decorators/index.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/is-absolute-url/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/helpers/createspa.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/container/test/ioc.spec.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest-diff/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/types.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/jest-diff/build/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/node_modules/@types/jest/index.d.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/application.ts",
+      "/users/testaccount/code/web/slick-for-svelte/src/decorators/initmodule.ts",
       "/users/testaccount/code/web/slick-for-svelte/src/slick-for-svelte-factory.ts",
-      "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts",
-      "/users/testaccount/code/web/slick-for-svelte/node_modules/reflect-metadata/index.d.ts"
+      "/users/testaccount/code/web/slick-for-svelte/src/framework/initmodule.ts"
     ]
   },
-  "version": "3.4.5"
+  "version": "3.5.3"
 }

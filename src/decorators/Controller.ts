@@ -1,14 +1,15 @@
 import { Class } from "utility-types";
 import { injectable } from "inversify";
-import { INJECT_CONSTRUCT, CONTROLLER_PATH } from "../types/constants";
-export function Controller(path: string = "/") {
+import { INJECT_CONSTRUCT, CONTROLLER_PATH, INJECT_OPTIONS } from "../types/constants";
+import { ControllerOptions } from "../types/ControllerOptions";
+
+
+export function Controller(path: string = "/",options?:ControllerOptions) {
     return (constructor: Class<any>) => {
-        let inject = Reflect.getMetadata("design:paramtypes", constructor);
-        Reflect.defineMetadata(INJECT_CONSTRUCT, inject, constructor);
         Reflect.defineMetadata(CONTROLLER_PATH, path, constructor);
-        constructor = injectable()(constructor);
-        Reflect.defineMetadata(INJECT_CONSTRUCT, inject, constructor);
-        Reflect.defineMetadata(CONTROLLER_PATH, path, constructor);
+        if(options){
+            Reflect.defineMetadata(INJECT_OPTIONS,options,constructor);
+        }
         return constructor;
     };
 }
