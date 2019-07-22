@@ -10,7 +10,6 @@ export const CurrentParameter = {
     value:null as any
 }
 
-
 PARAMSTORE.subscribe(value=>{
     CurrentParameter.value=value;
 })

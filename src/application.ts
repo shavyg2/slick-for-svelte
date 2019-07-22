@@ -3,7 +3,6 @@ import {
   CONTROLLER_PATH,
   VIEW_PATH,
   INJECT_OPTIONS,
-  INJECT_CONSTRUCT
 } from "./types/constants";
 import { IModuleConfig } from "./types/IModuleConfig";
 import { History } from "history";
@@ -94,15 +93,10 @@ export class SlickApp {
             Object.assign(templateProps,{error:options.error})
         }
 
-
-
-
         Object.assign(templateProps, {
           URLSTORE,
           PARAMSTORE
         });
-
-
 
         Object.assign(templateProps, { viewProps });
         const backup = Object.assign({},templateProps)

@@ -6,7 +6,6 @@ export const SCOPE = {
 }
 
 export interface ValueProvider {
-
     scope?:"Request" | "Singleton" | "Transient"
     provide:any;
     useValue:any;

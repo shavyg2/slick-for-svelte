@@ -12,8 +12,6 @@ export function Inject(identifier:any){
             index:parameterIndex,
             identifier
         })
-
         Reflect.defineMetadata(PARAMETER,params,target,method);
-        
     }
 }

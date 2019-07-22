@@ -1,6 +1,4 @@
 import { Class } from "utility-types";
-import { Container } from "inversify";
-import isPromise from "is-promise";
 import { IModuleConfig } from "../types/IModuleConfig";
 import { MODULE_OPTIONS, MODULE } from "../types/constants";
 import * as check from "../provider/check";
