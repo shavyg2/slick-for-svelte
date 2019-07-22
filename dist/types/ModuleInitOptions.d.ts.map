@@ -1,1 +1,0 @@
-{"version":3,"file":"ModuleInitOptions.d.ts","sourceRoot":"","sources":["../../src/types/ModuleInitOptions.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,SAAS,CAAC;AAC9B,MAAM,WAAW,iBAAiB;IAC9B,IAAI,EAAC,GAAG,CAAA;IACR,MAAM,EAAE,WAAW,CAAC;IACpB,YAAY,EAAE,GAAG,CAAC;IAClB,OAAO,EAAE,OAAO,CAAC,OAAO,CAAC;CAC5B"}

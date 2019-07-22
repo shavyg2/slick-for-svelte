@@ -1,1 +1,0 @@
-{"version":3,"file":"RouteDetails.d.ts","sourceRoot":"","sources":["../../src/types/RouteDetails.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAC5C,MAAM,WAAW,YAAY;IACzB,UAAU,EAAE,GAAG,CAAC;IAChB,eAAe,EAAE,MAAM,CAAC;IACxB,WAAW,EAAE,WAAW,EAAE,CAAC;CAC9B"}
