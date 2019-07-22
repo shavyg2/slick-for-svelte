@@ -35,7 +35,7 @@
     "reflect-metadata": "^0.1.13",
     "svelte": "^3.6.7"
   },
-  "name": "slick-for-svelte",
+  "name": "@slick-for/svelte",
   "version": "1.0.0",
   "description": "A Framework for Stitching together sick svelte Applications",
   "main": "dist/slick-for-svelte-factory.js",
