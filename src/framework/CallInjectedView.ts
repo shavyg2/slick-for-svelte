@@ -13,7 +13,6 @@ export function CallInjectedView(target: any, key: string) {
     let container = Reflect.getMetadata(MODULE, constructor);
     let inject: any[] = Reflect.getMetadata(VIEW, constructor, key);
 
-
     const params = Reflect.getMetadata(PARAMETER,constructor,key);
     if(params){
         params.forEach(({index,identifier})=>{

@@ -18,7 +18,7 @@ import isPromise from "is-promise";
 
 
     @Controller("/thing",{
-        scope:"Request"
+        scope:"Request",
     })
     class TestController{
 
@@ -33,6 +33,12 @@ import isPromise from "is-promise";
     const factory = {
         provide:"factory",
         async useFactory(operation:Operation){
+
+                await new Promise((r)=>{
+
+                    setTimeout(r,500)
+                })
+
                 return {
                     operation
                 }
@@ -94,6 +100,8 @@ describe("With Promise",()=>{
         let finalThing = await thing;
 
         expect(finalThing.operation).toBeInstanceOf(Operation);
+        expect(finalThing.operation).toBeInstanceOf(Operation);
+        expect(finalThing.operation.service).toBeInstanceOf(Service);
 
     })
 

@@ -1,9 +1,6 @@
 
 import isObject from "isobject";
 
-
-
-
 export function IsProvider(provider:any){
     return (isObject(provider) && isObjectProvider(provider)) || IsConstructor(provider);
 }
