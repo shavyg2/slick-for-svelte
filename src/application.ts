@@ -63,10 +63,12 @@ export class SlickApp {
     this.history.listen(async (location, action) => {
       
       const pageURL = urlJoin(
+        "/",
         location.pathname,
         location.search,
         location.hash
       );
+
       
       QUERYSTORE.update(() => queryString.parse(location.search));
 
@@ -75,6 +77,7 @@ export class SlickApp {
         param = route.match(pageURL.trim() || "/");
         return param;
       });
+
 
       
 
@@ -89,7 +92,6 @@ export class SlickApp {
           }
         });
       } else if (match !== -1) {
-        console.log(match)
         let [, ViewActionDetail] = match;
         const controller = ViewActionDetail.controller;
         const Controller = await CallInjectedController(controller);
