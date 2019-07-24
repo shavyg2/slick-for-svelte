@@ -374,6 +374,8 @@ export class UserController {
 
 ### Services
 The case of the missing service file. You can add it.
+Note that services can't have method properties automatically injected.
+This can only be done in the controller. However the constructor can.
 
 ```ts
 
