@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { InitModule } from "./decorators/InitModule";
 import { ModuleInitOptions } from "./types/ModuleInitOptions";
 

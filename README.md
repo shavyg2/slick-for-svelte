@@ -9,52 +9,51 @@ Manage your views and routing following a practical and easy to follow approach 
 
 
 ```ts
-@Controller("/admin",{
-    layout:AdminComponent,
-    loading:AdminLoadingView,
-    error:AdminErrorView,
-    pause:400
-})
-class AdminController{
 
-    constructor(private user:UserService,private account:AccountService){
 
-    }
+@Controller("/user/")
+export class UserController {
+  
+  
+  
+  @View("/home", HomePage)
+  async homepage(userapi: GithubApi, @Query("page") page = 1) {
+    let users = await userapi.getPage(page);
 
-    @View("/")
-    async getMainPage(){
+    return {
+      users: users
+    };
+  }
 
-        //This can be using writable stores in the background.
-        const user = await this.user.getAdminUserDetails();
-        
+  
+  
+  @View("/:username", UserPage)
+  async getUserPage(api: GithubApi, @Param("username") username: string) {
+    let user = await api.getUserByName(username);
+    return {
+      user
+    };
+  }
 
-        //Notice that i didn't await for the settings and the Admin panel details
-        const userSettings = this.account.getUserSettings(user.id);
-        const userPanels = this.account.getAdminPanelDetails(user.id)
 
-        return {
-            view:AdminMainComponent,
-            user,
-            userSettings,
-            userPanels,
-        }
-    }
+
+
 }
 ```
 
 
-This library is inspired by nest and using dependency injection to gather all the requirements needed to call a route.
+This library is inspired by nest and using dependency injection to gather all the requirements
+needed to call a route.
 
 
 
 ## Purpose
 
 This is a lite framework created to aid in routing and dependency injection.
-It allows you to create your route, and data and leave svelte to do what it does best, rendering views.
+It allows you to create your routes and  gather data, while leaving svelte to do what it does 
+best, rendering views.
 
-When navigating to a route you want to to the information and you need certain dependencies to carry that out. This is why this library aim to be such.
-
-
+When navigating to a route, it comes with all the information and dependencies you need.
 
 
 ### Installation
@@ -63,10 +62,10 @@ When navigating to a route you want to to the information and you need certain d
 
 [here]()
 
-##### I want to set up from official svelte repo because i like that more, it's gonna be more work but i am up for it. (Proceed)
+##### I want to set up it up from the official svelte repo, it's gonna be more work but i am up for it. (Proceed)
 
 
-from official repo. Notice i am using the webpack template and **not the roll up template.
+From the Official repo. Notice i am using the webpack template and **not the roll up template**.
 ```
 npx degit sveltejs/template-webpack svelte-app
 cd svelte-app
@@ -244,10 +243,10 @@ Read it if you want doesn't matter, but it will give some insight as to home pag
     {:else}
         {#if props.layout||layout}
             <svelte:component this={props.layout || layout} {...props}>
-                <svelte:component this={props.view} {...props}/>
+                <svelte:component this={view} {...props}/>
             </svelte:component>
         {:else}
-            <svelte:component this={props.view} {...props}/>
+            <svelte:component this={view} {...props}/>
         {/if}
     {/if}
 {:catch error$}
@@ -273,30 +272,30 @@ Do **exactly** this
 
 ### Imports
 ```ts
-    import {Controller,View,Module,Injectable,Inject} from "@slick-for/svelte";
+    import {Controller,View,Module,Injectable,Inject,Param,Query,History} from "@slick-for/svelte";
 ```
 
 These are going to be your best friends, know them well and you will see them referenced in 
-other areas. Remember.
+other areas.
 
 
 
 ### Main.js --> Main.ts 
 
-Copy and paste, you will be changing is so doesn't matter just do it for now. You will see errors, don't let the red squigglies stress you.
+The ```main.js``` file needs to be changed to a ```.ts``` file since we are now using typescript. Copy and paste, you will be changing is so doesn't matter just do it for now. You will see errors, don't let the red squigglies stress you.
 
 ```ts
 
-import {Controller,View,Module,Injectable,Inject, SlickForSvelteFactory} from "@slick-for/svelte"; //you installed
-import {createBrowserHistory} from "history" //you installed
-import { UserController } from "./controller/UserController"; //doesn't exist yet
-import { GithubApi } from "./services/github-api"; //doesn't exist yet
-import Template from "./Template.svelte"; // You created
-import Error404 from "./404.svelte"  //You created
+import {Module,SlickForSvelteFactory} from "@slick-for/svelte";
+import {createBrowserHistory} from "history"
+import { UserController } from "./controller/UserController";
+import { GithubApi } from "./services/github-api";
+import Template from "./Template.svelte";
+import Error404 from "./404.svelte"
+import ErrorPage from "./Error.svelte";
 
 
 const history =  createBrowserHistory();
-
 @Module({
 	controllers:[UserController],
 	provider:[GithubApi]
@@ -309,14 +308,14 @@ export class ApplicationModule{
 const app = SlickForSvelteFactory.create(ApplicationModule,{
 	base:Template, // Remember that template i told you to keep in your back pocket, take it out.
 	history, //https://www.npmjs.com/package/history
-	component404:Error404, 
-	target:document.body // Some people will like to select an element like #main, do so if you like
+	component404:Error404, //svelte 404 Page, make it up or copy from somewhere else,
+	error:ErrorPage,
+	target:document.body //Where to render to https://svelte.dev/docs#Creating_a_component
 })
 
 /**
- * Do you know express/http node and the listen api, if you do great, basically similar things.
- * If you don't, DON'T WORRY, This makes things work. With out it, your application is configured, but not listening to the browser url and it's changes.
- * and won't render
+ * Do you know express and the listen api, if you do great, basically the same thing.
+ * If you don't, DON'T WORRY, This makes things work. With out it it is configured, but not working.
  * Call it.
  */
 app.Initialize();
@@ -338,25 +337,38 @@ So obviously nothing is work. Here are files you are missing
 The case of the missing controller file. You can create it.
 
 ```ts
-    //src/controllers/UserController.ts
-    import {Controller,View} from "@slick-for/svelte"
-    //Regular svelte component. Confused ? https://svelte.dev/tutorial/basics
-    import Home from "../pages/home.svelte"
+//src/controllers/UserController.ts
+import { Controller, View, Param, Query } from "@slick-for/svelte";
 
-    @Controller("/user/")
-    class UserController{
 
-        @View("/home")
-        async homepage(userapi:GithubApi){
-            let user = await userapi.getCurrentUser();
+//Regular svelte components. Confused ? https://svelte.dev/tutorial/basics
+import HomePage from "./pages/home.svelte";
+import UserPage from "./pages/user.svelte";
 
-            return {
-                view:Home,
-                account:account
-            }
-        }
 
-    }
+//Service Component
+import { GithubApi } from "../services/github-api";
+
+@Controller("/user/")
+export class UserController {
+  @View("/home", HomePage)
+  async homepage(userapi: GithubApi, @Query("page") page = 1) {
+    let users = await userapi.getPage(page);
+
+    return {
+      users: users
+    };
+  }
+
+  @View("/:username", UserPage)
+  async getUserPage(api: GithubApi, @Param("username") username: string) {
+    let user = await api.getUserByName(username);
+    return {
+      user
+    };
+  }
+}
+
 
 ```
 
@@ -365,56 +377,43 @@ The case of the missing service file. You can add it.
 
 ```ts
 
-import { Injectable,
-        CurrentQuery,    //useful for ?page=1 value is {page:1}
-        CurrentParameter //handy /user/:username value is {username:<username>}
-        /**
-         *  if you want these auto injected for you, just create a provider and pass it in.
-        */
+import {
+  Injectable
 } from "@slick-for/svelte";
 
 @Injectable()
-export class GithubApi{
+export class GithubApi {
+  private apiUrl = "https://api.github.com";
 
-    private apiUrl = "https://api.github.com"
+  async getPage(page: number) {
+    let res = await fetch(`${this.apiUrl}/users?since=${page}`);
+    let users = await this.isGood(res);
+    return users;
+  }
 
-    async getPage(){
-        let res = await fetch(`${this.apiUrl}/users?since=${this.page}`)
-        let users = await this.isGood(res);
-        return users;
+  async getUserByName(username: string) {
+    let res = await fetch(`${this.apiUrl}/users/${username}`);
+    let users = await this.isGood(res);
+    return users;
+  }
+
+  private async isGood(res: Response) {
+    if (res.status - 299 > 0) {
+      let text = await res.text();
+      let parsed;
+      try {
+        parsed = JSON.parse(text);
+      } catch (e) {
+        throw text;
+      }
+
+      throw parsed;
+    } else {
+      return res.json();
     }
-
-
-    async getUserByName(username:string){
-        let res = await fetch(`${this.apiUrl}/users/${username}`)
-        let users = await this.isGood(res);
-        return users;
-    }
-
-
-    //Note you could have injected you own fetch api module, and use that and hide away all the logic.
-    private async isGood(res: Response) {
-        if (res.status - 299 > 0) {
-            let text = await res.text();
-            let parsed;
-            try {
-                parsed = JSON.parse(text);
-            }
-            catch (e) {
-                throw text;
-            }
-
-            throw parsed;
-        }else {
-            return res.json();
-        }
-    }
-
-    private get page(){
-        let since = (CurrentQuery.value.page || 1) -1;
-        return since * 31;
-    }
+  }
 }
+
 ```
 
 
@@ -482,7 +481,7 @@ class AdminController{
 
     }
 
-    @View("/")
+    @View("/",AdminMainComponent)
     async getMainPage(){
 
         //This can be using writable stores in the background.
@@ -494,7 +493,6 @@ class AdminController{
         const userPanels = this.account.getAdminPanelDetails(user.id)
 
         return {
-            view:AdminMainComponent,
             user,
             userSettings,
             userPanels,
@@ -540,7 +538,7 @@ class AdminController{
 ```ts
     ...
 
-    @View("/")
+    @View("/",AdminMainComponent)
     async getMainPage(){
 
         //This can be using writable stores in the background.
@@ -552,7 +550,6 @@ class AdminController{
         const userPanels = this.account.getAdminPanelDetails(user.id)
 
         return {
-            view:AdminMainComponent,
             user,
             userSettings,
             userPanels,
