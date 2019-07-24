@@ -65,7 +65,7 @@ When navigating to a route, it comes with all the information and dependencies y
 
 ##### I rather have is all done for me, Where do i clone.
 
-[here]()
+[Here](https://github.com/shavyg2/slick-app-basic-setup)
 
 ##### I want to set up it up from the official svelte repo, it's gonna be more work but i am up for it. (Proceed)
 
