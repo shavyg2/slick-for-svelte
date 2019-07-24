@@ -3,6 +3,13 @@ import { ContainerBuilder } from "../config/ContainerBuilder";
 import "reflect-metadata";
 import isPromise from "is-promise";
 
+
+
+    @Injectable()
+    class Repo{
+
+    }
+
     @Injectable({
         scope:"Request"
     })
@@ -13,7 +20,11 @@ import isPromise from "is-promise";
 
     @Injectable()
     class Operation{
-        constructor(public service:Service,@Inject("simple") public simple){}
+        constructor(
+            public service:Service,
+            @Inject("simple") public simple,
+            public repo:Repo
+            ){}
     }
 
 
@@ -55,6 +66,7 @@ describe("With Promise",()=>{
     builder.add(simpleProvider);
     builder.add(factory);
     builder.add(TestController);
+    builder.add(Repo);
     const container = ContainerBuilder.getContainer(builder);
 
     it("should resolve service",()=>{
@@ -67,10 +79,15 @@ describe("With Promise",()=>{
         let operation = container.get(Operation);
         expect(operation).toBeInstanceOf(Operation)
         expect(operation.service).toBeInstanceOf(Service)
+        expect(operation.simple).toBe("Simple");
     })
     
-    it("should resolve singleton scope",()=>{
-        expect(container.get(Operation)).toBe(container.get(Operation))
+    it("should resolve scope",async ()=>{
+        let c1:Operation= await container.get(Operation)
+        let c2:Operation= await container.get(Operation)
+        expect(c1).not.toBe(c2)
+        expect(c1.repo).toBe(c2.repo)
+        expect(c1.repo).toBe(c2.repo)
     })
 
 

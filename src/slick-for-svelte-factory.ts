@@ -3,7 +3,8 @@ import { ModuleInitOptions } from "./types/ModuleInitOptions";
 
 export * from "./decorators";
 export * from "./stores/main";
-export * from "./helpers/createSpa";
+export * from "./helpers/spa";
+export * from "./helpers/history"
 export class SlickForSvelteFactory{
     static create(app:any,options:ModuleInitOptions){
         const App = InitModule(

@@ -2,6 +2,10 @@ import { FactoryProvider, SCOPE } from "../Provider";
 import uuid from "uuid/v4";
 import isPromise from "is-promise";
 import { IContainer } from "./IContainer";
+
+
+export type Scope = "Request"|"Transient"|"Singleton"
+
 export class Container implements IContainer {
     cache = {
         Request: new Map<any, Map<any, any>>(),
@@ -9,83 +13,159 @@ export class Container implements IContainer {
     };
     constructor(private providers: FactoryProvider[]) {
     }
-    get<T = any>(identifier: any): T | PromiseLike<T> {
-        let id = uuid();
-        this.cache.Request.set(id, new Map());
-        let build = this.buildWithCapture(identifier, id);
-        if (isPromise(build)) {
-            return build.then(build => {
-                this.cache.Request.delete(id);
-                return build;
-            });
-        }
-        else {
-            this.cache.Request.delete(id);
-            return build;
-        }
-    }
+
 
     isBound(identifier:any){
         return !!this.providers.find(x=>x.provide===identifier)
     }
-    buildWithCapture(identifier: any, requestID: string) {
-        let instance = this.build(identifier, requestID);
-        let provider = this.providers.find(x => x.provide === identifier);
-        let cache: Map<any, any> | WeakMap<any, any>;
-        let cacheKey;
-        if (provider.scope === SCOPE.Request) {
-            cache = this.cache.Request.get(identifier);
-            cacheKey = requestID;
-        }
-        else if (provider.scope === SCOPE.Singleton) {
-            cache = this.cache.Singleton;
-            cacheKey = identifier;
-        }
-        if (isPromise(instance)) {
-            return instance.then(x => {
-                if (cache) {
-                    cache.set(cacheKey, x);
-                }
-                return x;
-            });
-        }
-        else {
-            if (cache) {
-                cache.set(cacheKey, instance);
-            }
-            return instance;
+
+
+
+    get<T = any>(identifier: any): T | PromiseLike<T> {
+        let id = uuid();
+        this.cache.Request.set(id, new Map());
+        let build = this.build(identifier, id);
+
+        if(isPromise(build)){
+            return build.then(instance=>{
+                this.cache.Request.delete(id);
+                return instance;
+            })
+        }else{
+            return build;
         }
     }
+
     build(identifier: any, requestID: string) {
         let provider = this.providers.find(x => x.provide === identifier);
         if (!provider) {
             throw new Error(`No Provider for identifier ${this.printIdentifier(identifier)}`);
         }
-        const request = this.cache.Request.get(requestID);
-        if (provider.scope === "Request" && request.has(identifier)) {
-            return request.get(identifier);
-        }
-        else if (provider.scope === "Singleton" && this.cache.Singleton.has(identifier)) {
-            return this.cache.Singleton.get(identifier);
-        }
+
         if (provider.inject && provider.inject.length) {
-            //Potential Race condition
-            let dependencies = provider.inject.map(x => this.buildWithCapture(x, requestID));
-            if (dependencies.some(isPromise)) {
-                return Promise.all(dependencies.map(x => Promise.resolve(x)))
-                    .then(dep => {
-                        return provider.useFactory(...dep);
-                    });
-            }
-            else {
-                return provider.useFactory(...dependencies);
+
+            let injectScope = this.getScopeOfInjects(provider.inject);
+            let  scope = ScopePicker.pickList(provider.scope,...injectScope);
+            
+            switch(scope){
+                case "Singleton":
+                    return this.buildAsSingleton(provider,requestID)
+                case "Request":
+                    return this.buildAsRequest(provider,requestID);
+                case "Transient":
+                    return this.buildAsTransient(provider,requestID);
             }
         }
         else {
-            return provider.useFactory();
+            switch(provider.scope){
+                case "Singleton":
+                    return this.buildAsSingleton(provider,requestID)
+                case "Request":
+                    return this.buildAsRequest(provider,requestID);
+                case "Transient":
+                    return this.buildAsTransient(provider,requestID);
+            }
         }
+    }
+
+
+    private buildAsSingleton(provider:FactoryProvider,requestID:string){
+        let cache = this.cache.Singleton;
+        if(cache.has(provider.provide)){
+            return cache.get(provider.provide)
+        }else{
+            let dependencies = provider.inject.map(x=>{
+                return this.build(x,requestID)
+            })
+
+            if(dependencies.some(isPromise)){
+                return Promise.all(dependencies.map(x=>Promise.resolve(x)))
+                .then(args=>{
+                    return provider.useFactory(...args);
+                }).then(instance=>{
+                    cache.set(provider.provide,instance);
+                    return instance
+                })
+            }else{
+                const instance =  provider.useFactory(...dependencies);
+                cache.set(provider.provide,instance);
+                return instance;
+            }
+        }
+    }
+
+    buildAsRequest(provider:FactoryProvider,requestID:string){
+        let cache = this.cache.Request.get(requestID);
+
+        if(cache.has(provider.provide)){
+            return cache.get(provider.provide)
+        }else{
+            let dependencies = provider.inject.map(x=>{
+                return this.build(x,requestID)
+            })
+
+            if(dependencies.some(isPromise)){
+                return Promise.all(dependencies.map(x=>Promise.resolve(x)))
+                .then(args=>{
+                    return provider.useFactory(...args);
+                }).then(instance=>{
+                    cache.set(requestID,instance);
+                    return instance;
+                })
+            }else{
+                const instance = provider.useFactory(...dependencies);
+                cache.set(requestID,instance);
+                return instance;
+            }
+        }
+    }
+
+
+    buildAsTransient(provider:FactoryProvider,requestID){
+
     }
     private printIdentifier(identifier: any) {
         return `${identifier}`;
     }
+
+
+    private getScopeOfInjects(injects:any[]){
+        let scopes = injects.map(inject=>{
+            let dependency = this.providers.find(x=>x.provide === inject)
+
+            if(!dependency){
+                throw new Error(`Dependency not found for ${inject}`)
+            }
+
+
+            return dependency.scope;
+        })
+
+        return scopes;
+    }
+
+
+
+    private scopePicker(scope1:Scope,scope2:Scope,options = ["Transient","Request","Singleton"]){
+        return [scope1,scope2].sort((a,b)=>{
+            return options.indexOf(a) - options.indexOf(b)
+        })[0];
+    }
+}
+
+
+export class ScopePicker{
+
+    public static pickList(...scopes:Scope[]){
+        return scopes.reduce((a,b)=>{
+            return this.pick(a,b)
+        },"Singleton");
+    }
+    
+    public static pick(scope1:Scope,scope2:Scope,options = ["Transient","Request","Singleton"]){
+        return [scope1,scope2].sort((a,b)=>{
+            return options.indexOf(a) - options.indexOf(b)
+        })[0];
+    }
+
 }

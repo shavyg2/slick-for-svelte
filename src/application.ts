@@ -16,6 +16,7 @@ import { CallInjectedController } from "./framework/CallInjectedController";
 import queryString from "query-string";
 import promiseAny from "promise-any";
 import { Container } from "./container/builder/Container";
+import { historyStore } from "./stores/history";
 
 export class SlickApp {
   constructor(
@@ -25,7 +26,10 @@ export class SlickApp {
     private base: any,
     private Component404: any,
     private history: History
-  ) {}
+  ) {
+
+    historyStore.update(x=>this.history)
+  }
 
   Initialize() {
     const routeDetail = this.controllers.map(Controller => {
