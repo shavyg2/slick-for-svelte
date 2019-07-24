@@ -59,7 +59,27 @@ export class SlickApp {
     });
 
     let match: any = -1;
-    URLSTORE.subscribe(async pageURL => {
+
+    this.history.listen(async (location, action) => {
+      
+      const pageURL = urlJoin(
+        location.pathname,
+        location.search,
+        location.hash
+      );
+      
+      QUERYSTORE.update(() => queryString.parse(location.search));
+
+      let param: any;
+      match = UrlCompass.find(([route]) => {
+        param = route.match(pageURL.trim() || "/");
+        return param;
+      });
+
+      
+
+      PARAMSTORE.update(() => param);
+      
       if (!match) {
         Application.$set({
           URLSTORE,
@@ -69,11 +89,12 @@ export class SlickApp {
           }
         });
       } else if (match !== -1) {
+        console.log(match)
         let [, ViewActionDetail] = match;
         const controller = ViewActionDetail.controller;
         const Controller = await CallInjectedController(controller);
         
-        
+   
         let viewProps = null;
         try{
             viewProps = Promise.resolve(CallInjectedView(Controller, ViewActionDetail.method));
@@ -122,30 +143,11 @@ export class SlickApp {
           
             Application.$set(templateProps);
         }).catch(e=>{
-          
             Object.assign(backup,{viewProps:Promise.resolve(Promise.reject(e))})
             Application.$set(backup)
         })
 
       }
-    });
-
-    this.history.listen(async (location, action) => {
-      const pageURL = urlJoin(
-        location.pathname,
-        location.search,
-        location.hash
-      );
-      QUERYSTORE.update(() => queryString.parse(location.search));
-
-      let param: any;
-      match = UrlCompass.find(([route]) => {
-        param = route.match(pageURL);
-        return param;
-      });
-
-      PARAMSTORE.update(() => param);
-      URLSTORE.update(() => pageURL);
     });
 
     const init = urlJoin(window.location.pathname, window.location.search);

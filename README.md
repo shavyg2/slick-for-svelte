@@ -58,6 +58,11 @@ When navigating to a route, it comes with all the information and dependencies y
 
 ### Installation
 
+
+##### Before i install i just want to play with the framework and see it work.
+
+[Click Here](https://codesandbox.io/s/lflyu)
+
 ##### I rather have is all done for me, Where do i clone.
 
 [here]()
