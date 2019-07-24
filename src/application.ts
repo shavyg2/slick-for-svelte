@@ -3,6 +3,7 @@ import {
   CONTROLLER_PATH,
   VIEW_PATH,
   INJECT_OPTIONS,
+  VIEW_COMPONENT,
 } from "./types/constants";
 import { IModuleConfig } from "./types/IModuleConfig";
 import { History } from "history";
@@ -25,13 +26,17 @@ export class SlickApp {
     private target: HTMLElement,
     private base: any,
     private Component404: any,
-    private history: History
+    private history: History,
+    private errorPage?:any
   ) {
 
     historyStore.update(x=>this.history)
   }
 
   Initialize() {
+
+
+
     const routeDetail = this.controllers.map(Controller => {
       return this.getControllerRouteDetail(Controller);
     });
@@ -67,7 +72,7 @@ export class SlickApp {
         let [, ViewActionDetail] = match;
         const controller = ViewActionDetail.controller;
         const Controller = await CallInjectedController(controller);
-
+        
         
         let viewProps = null;
         try{
@@ -75,7 +80,12 @@ export class SlickApp {
         }catch(e){
             viewProps = Promise.resolve(Promise.reject(e))
         }
+
+
+        let view = Reflect.getMetadata(VIEW_COMPONENT,controller,ViewActionDetail.method);
+
         
+        this.ensureViewExist(view);
 
         const templateProps: any = {};
 
@@ -95,19 +105,24 @@ export class SlickApp {
 
         if("error" in options){
             Object.assign(templateProps,{error:options.error})
+        }else if(this.errorPage){
+            Object.assign(templateProps,{error:this.errorPage})
         }
 
         Object.assign(templateProps, {
           URLSTORE,
-          PARAMSTORE
+          PARAMSTORE,
+          view
         });
 
         Object.assign(templateProps, { viewProps });
         const backup = Object.assign({},templateProps)
         promiseAny([viewProps,new Promise(r=>setTimeout(r,options.pause||400))])
         .then(()=>{
+          
             Application.$set(templateProps);
         }).catch(e=>{
+          
             Object.assign(backup,{viewProps:Promise.resolve(Promise.reject(e))})
             Application.$set(backup)
         })
@@ -197,5 +212,13 @@ export class SlickApp {
     };
 
     return routeDetail;
+  }
+
+
+
+  private ensureViewExist(view){
+    if(!view){
+      throw new Error(`New doesn't exist`)
+    }
   }
 }

@@ -3,8 +3,10 @@ import { IModuleConfig } from "../types/IModuleConfig";
 import { MODULE_OPTIONS, MODULE } from "../types/constants";
 import * as check from "../provider/check";
 import { ContainerBuilder } from "../container/config/ContainerBuilder";
+import { ApplicationProviders } from "../provider/defaultProviders";
 export function Module(config: IModuleConfig) {
     return (constructor: Class<any>) => {
+
         var builder = new ContainerBuilder()
         const container = ContainerBuilder.getContainer(builder);
         //TODO add module to children
@@ -38,7 +40,16 @@ export function Module(config: IModuleConfig) {
                     }
                 }
             });
+
+            ApplicationProviders.forEach(provider=>{
+                
+                builder.add(provider)
+            })
+            return constructor;
         }
-        return constructor;
+
+
+
+        
     };
 }

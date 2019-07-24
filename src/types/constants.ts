@@ -21,5 +21,7 @@ export const MODULE = Symbol.for("module");
 
 export const PARAMETER = Symbol.for("parameter")
 
+export const VIEW_COMPONENT = Symbol.for("view-component");
+
 
 

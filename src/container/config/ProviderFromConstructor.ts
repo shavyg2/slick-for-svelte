@@ -18,6 +18,6 @@ export function ProviderFromConstructor(constructor: IConstructor) {
     useFactory: (...args: any[]) => {
       return Reflect.construct(constructor, args);
     },
-    scope: (Reflect.getMetadata(INJECT_OPTIONS, constructor) || {}).scope
+    scope: (Reflect.getMetadata(INJECT_OPTIONS, constructor) || {}).scope || "Singleton"
   };
 }

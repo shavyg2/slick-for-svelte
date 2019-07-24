@@ -32,6 +32,7 @@ export class Container implements IContainer {
                 return instance;
             })
         }else{
+            this.cache.Request.delete(id);
             return build;
         }
     }
@@ -64,6 +65,8 @@ export class Container implements IContainer {
                     return this.buildAsRequest(provider,requestID);
                 case "Transient":
                     return this.buildAsTransient(provider,requestID);
+                default:
+                    throw new Error(`Invalid scope ${provider.scope}`)
             }
         }
     }
@@ -95,12 +98,13 @@ export class Container implements IContainer {
     }
 
     buildAsRequest(provider:FactoryProvider,requestID:string){
+        
         let cache = this.cache.Request.get(requestID);
 
         if(cache.has(provider.provide)){
             return cache.get(provider.provide)
         }else{
-            let dependencies = provider.inject.map(x=>{
+            let dependencies = (provider.inject||[]).map(x=>{
                 return this.build(x,requestID)
             })
 
@@ -109,12 +113,12 @@ export class Container implements IContainer {
                 .then(args=>{
                     return provider.useFactory(...args);
                 }).then(instance=>{
-                    cache.set(requestID,instance);
+                    cache.set(provider.provide,instance);
                     return instance;
                 })
             }else{
                 const instance = provider.useFactory(...dependencies);
-                cache.set(requestID,instance);
+                cache.set(provider.provide,instance);
                 return instance;
             }
         }
