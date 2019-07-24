@@ -219,7 +219,7 @@ Make life easy add to your ```tsconfig.json```
 ### Templates
 
 Honestly just copy this and place under src/Template.svelte.
-Read it if you want doesn't matter, but it will give some incite as to home page views are generated
+Read it if you want doesn't matter, but it will give some insight as to home page views are generated
 
 ```xhtml
 <script>
@@ -283,7 +283,7 @@ other areas. Remember.
 
 ### Main.js --> Main.ts 
 
-Copy and paste, you will be changing is so doesn't matter just do it for now. You will see errors, don't let the red squillies stress you.
+Copy and paste, you will be changing is so doesn't matter just do it for now. You will see errors, don't let the red squigglies stress you.
 
 ```ts
 
