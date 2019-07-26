@@ -5,6 +5,7 @@ import { ControllerOptions } from "../types/ControllerOptions";
 
 
 export function Controller(path: string = "/",options?:ControllerOptions) {
+    path = path === ""? "/":path
     return (constructor: Class<any>) => {
         Reflect.defineMetadata(CONTROLLER_PATH, path, constructor);
         if(options){
@@ -13,3 +14,5 @@ export function Controller(path: string = "/",options?:ControllerOptions) {
         return constructor;
     };
 }
+
+

@@ -5,7 +5,7 @@
     "jest": "^24.8.0",
     "parcel": "^1.12.3",
     "reflect-metadata": "^0.1.13",
-    "svelte": "^3.6.7",
+    "svelte": "^3.6.8",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"

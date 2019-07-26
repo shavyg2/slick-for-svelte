@@ -1,11 +1,9 @@
 # Slick For Svelte
 
 
-
-
 ## What does this library do for you. 
 
-Manage your views and routing following a practical and easy to follow approach for your svelte component.
+Manage your views and routing following a practical and easy to follow approach for your svelte components.
 
 
 ```ts
@@ -35,49 +33,36 @@ export class UserController {
     };
   }
 
-
-
-
 }
 ```
 
 
-This library is inspired by nest and using dependency injection to gather all the requirements
+This library is inspired by nest and uses dependency injection to gather all the requirements
 needed to call a route.
-
-
-
-## Purpose
-
-This is a lite framework created to aid in routing and dependency injection.
-It allows you to create your routes and  gather data, while leaving svelte to do what it does 
-best, rendering views.
-
-When navigating to a route, it comes with all the information and dependencies you need.
 
 
 ### Installation
 
 
-##### Before i install i just want to play with the framework and see it work.
+##### Before I install I just want to play with the framework and see it work.
 
 [Click Here](https://codesandbox.io/s/lflyu)
 
-##### I rather have is all done for me, Where do i clone.
+##### I rather have is all done for me, Where do I clone.
 
 [Here](https://github.com/shavyg2/slick-app-basic-setup)
 
-##### I want to set up it up from the official svelte repo, it's gonna be more work but i am up for it. (Proceed)
+##### I want to set up it up from the official svelte repo, it's gonna be more work, but I am up for it. (Proceed)
 
 
-From the Official repo. Notice i am using the webpack template and **not the roll up template**.
+Starting from the Official repo. Notice I am using the WebPack template and **not the roll up template**.
 ```
 npx degit sveltejs/template-webpack svelte-app
 cd svelte-app
 yarn or npm install
 ```
 
-### Dependecies (YOOOU need to install them, not me)
+### Dependencies (YOOOU need to install them, not me)
 - typescript 
 - reflect-metadata
 - @slick-for/svelte
@@ -86,7 +71,7 @@ yarn or npm install
 
 
 **Confused?**
-Paste this in your terminal inside your project
+Paste one of the following options in your terminal inside your project folder.
 
 1.
 ```
@@ -108,7 +93,8 @@ yarn add --dev typescript
 
 ### You need Typescript (Not a nice to have, Required)
 
-#### I used Webpack Template, Did you use Rollup? Can't help you but it can be done. Here is what you do for webpack, something similar is needed for rollup
+#### I used the Webpack Template, Did you use Rollup? You will need to investigate how to get typescript working with Rollup.
+#### Here is what you do for webpack, something similar is needed for rollup.
 
 1.
 ```
@@ -124,7 +110,7 @@ yarn add --dev awesome-typescript-loader
 Located ```webpack.config.js``` in your project root.
 
 
-Here is what you need to do ***Exactly***
+Here is what you need to do **Exactly**
 
 1. Easy Way
 ```
@@ -136,7 +122,7 @@ https://github.com/shavyg2/slick-for-svelte-test/blob/master/webpack.config.js
 
 2. Non Beginner (Webpack Config scares some people.)
 
-This needs to change (original file content)
+The original file contains the following:
 ```js
 resolve: {
     alias: {
@@ -148,19 +134,19 @@ resolve: {
 
 ```
 
-Needs to be this (typescript extension added)
+You need to add support for typescript extension (typescript extension added)
 ```js
 resolve: {
     alias: {
         svelte: path.resolve('node_modules', 'svelte')
     },
-    extensions: ['.mjs', '.js', '.svelte','.ts'],
+    extensions: ['.mjs', '.js', '.svelte','.ts'], //here
     mainFields: ['svelte', 'browser', 'module', 'main']
 },
 ```
 
 
-Add to module.rules: Remember you can use easy link for reference
+Add ```awesome-typescript-loader``` and configure it for webpack, below is a reference.
 ```js
 {
     test: /\.ts$/,
@@ -174,7 +160,7 @@ Add to module.rules: Remember you can use easy link for reference
 ```
 
 
-add this for the dev server to work on a Single Page App, this redirects everything in webpack to index.html in public folder.
+Configure webpack dev server to use the ```index.html``` file for your single page application. Below is a reference.
 ```js 
 devServer: {
     port:process.env.PORT,
@@ -186,7 +172,8 @@ devServer: {
 
 
 
-Entry should now be (We are using typescript):
+The entry file webpack compiles need to now be a typescript file.
+
 ```js
 entry: {
     bundle: ['./src/main.ts']
@@ -204,12 +191,12 @@ npx tsc --init
 Add the following to your ```tsconfig.json```
 
 ```json
-    "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+    "experimentalDecorators": true,        
     "emitDecoratorMetadata": true, 
 ```
 
 
-Make life easy add to your ```tsconfig.json```
+I use these settings. It works lovely for me ```tsconfig.json```
 ```json
     "target": "es5",                         
     "module": "commonjs",                    
@@ -222,8 +209,8 @@ Make life easy add to your ```tsconfig.json```
 
 ### Templates
 
-Honestly just copy this and place under src/Template.svelte.
-Read it if you want doesn't matter, but it will give some insight as to home page views are generated
+Honestly just copy this and place under ```src/Template.svelte```.
+You can check this template file out to understand how certain things work, however you don't need to understand it.
 
 ```xhtml
 <script>
@@ -259,18 +246,18 @@ Read it if you want doesn't matter, but it will give some insight as to home pag
 {/await}
 ```
 
-This is where everything in your application will render to.
-It provide a layout over all and shouldn't need to change anything here.
-I know what you are thinking. I want to customize. There is a different place for that.
-Do **exactly** this
+This is the global template engine for all views. You shouldn't need to change it unless it is to add something application wide.
+Please refrain from doing this. There are better places to add customizations.
 
 
 
-### 404 Page 
+
+### 404 Page Sample 404 or Create your own.
 
 ```xhtml
 <!-- src/404.svelte -->
 <h1>Error 404</h1>
+Not found
 ```
 
 
@@ -280,14 +267,11 @@ Do **exactly** this
     import {Controller,View,Module,Injectable,Inject,Param,Query,History} from "@slick-for/svelte";
 ```
 
-These are going to be your best friends, know them well and you will see them referenced in 
-other areas.
+These are some of the tools that come with this library and are very common to see/use.
 
 
 
-### Main.js --> Main.ts 
-
-The ```main.js``` file needs to be changed to a ```.ts``` file since we are now using typescript. Copy and paste, you will be changing is so doesn't matter just do it for now. You will see errors, don't let the red squigglies stress you.
+### Main.ts 
 
 ```ts
 
@@ -308,8 +292,6 @@ const history =  createBrowserHistory();
 export class ApplicationModule{
 
 }
-
-
 const app = SlickForSvelteFactory.create(ApplicationModule,{
 	base:Template, // Remember that template i told you to keep in your back pocket, take it out.
 	history, //https://www.npmjs.com/package/history
@@ -318,28 +300,23 @@ const app = SlickForSvelteFactory.create(ApplicationModule,{
 	target:document.body //Where to render to https://svelte.dev/docs#Creating_a_component
 })
 
-/**
- * Do you know express and the listen api, if you do great, basically the same thing.
- * If you don't, DON'T WORRY, This makes things work. With out it it is configured, but not working.
- * Call it.
- */
 app.Initialize();
 
 ```
-This will start your application listen for the url changes using the history api.
+
+This will start your application listen for the URL changes using the history API.
 
 
 # Wheeeew (AMAZING!!!!!)
 
 Good Job, you have done great so far. Stretch you legs. Lemme know when you are ready.
 I will literally be waiting for you.
-So obviously nothing is work. Here are files you are missing
+
 
 
 
 ### Controller (Basic)
-
-The case of the missing controller file. You can create it.
+Add the missing controller file.
 
 ```ts
 //src/controllers/UserController.ts
@@ -430,12 +407,15 @@ export class GithubApi {
 yarn run dev
 ```
 
-## It doesn't look pretty in my vscode editor.
+
+You should be seeing the 404 page now
+
+## Need Syntax highlighting for Svelte
 https://marketplace.visualstudio.com/items?itemName=JamesBirtles.svelte-vscode
 
 
 
-## Advanced (Some where, right now someone thinks your an hero, let's build on that)
+## Advanced (wow super star. Keep going!!)
 
 
 ### Controller (Advance)
