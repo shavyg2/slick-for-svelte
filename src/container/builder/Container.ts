@@ -60,7 +60,7 @@ export class Container implements IContainer {
             }
         }
         else {
-            switch(provider.scope){
+            switch(provider.scope || "Singleton"){
                 case "Singleton":
                     return this.buildAsSingleton(provider,requestID)
                 case "Request":
