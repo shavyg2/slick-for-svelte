@@ -39,7 +39,7 @@ export function isConstructor(symbol:any) {
         symbol instanceof Function &&
         symbol.constructor &&
         symbol.constructor instanceof Function &&
-        notUndefined(new symbol) &&
+        // notUndefined(new symbol) &&
         Object.getPrototypeOf(symbol) !== Object.prototype &&
         symbol.constructor !== Object &&
         symbol.prototype.hasOwnProperty('constructor');

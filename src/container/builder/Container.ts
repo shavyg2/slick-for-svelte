@@ -48,6 +48,8 @@ export class Container implements IContainer {
             let injectScope = this.getScopeOfInjects(provider.inject);
             let  scope = ScopePicker.pickList(provider.scope,...injectScope);
             
+            scope = provider.scope || "Singleton"
+
             switch(scope){
                 case "Singleton":
                     return this.buildAsSingleton(provider,requestID)

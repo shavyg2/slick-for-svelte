@@ -19,6 +19,7 @@ export class ContainerBuilder implements IContainerBuilder {
             this.providers.push(ProviderFromValue(provider));
         }
         else if (check.IsUseFactory(provider)) {
+            provider.inject = provider.inject || []
             this.providers.push(provider);
         }
         else {

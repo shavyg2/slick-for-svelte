@@ -47,6 +47,7 @@ export class SlickApp {
   }
 
   Initialize() {
+    
     this.compile();
     this.start();
   }
@@ -58,17 +59,20 @@ export class SlickApp {
   }
 
   private start() {
+    
     const init = urlJoin(window.location.pathname, window.location.search);
     this.history.push(init);
   }
 
   private GetAppConfiguration() {
+    
     const routeDetail = this.controllers.map(Controller => {
       return this.getControllerRouteDetail(Controller);
     });
     const RouteNavigation = this.getViewNavigation(routeDetail);
 
     let UrlCompass = RouteNavigation.map(navigation => {
+      
       const search = new RouteParser(navigation.url);
       return [search, navigation] as const;
     });
@@ -87,15 +91,22 @@ export class SlickApp {
     });
 
     this.history.listen(async (location, action) => {
+
+
       const pageURL = urlJoin(
         "/",
         location.pathname,
         location.search,
         location.hash
-      );
+        );
+        
+      console.info(`page navigation "${pageURL}"`);
+      
 
+      
       let param: any;
       const match = urlPathReference.find(([route]) => {
+    
         param = route.match(pageURL.trim() || "/");
         return param;
       });
@@ -105,8 +116,10 @@ export class SlickApp {
       URLSTORE.update(()=>pageURL)
 
       await tick();
-
+      
       if (!match) {
+
+        
         Application.$set({
           URLSTORE,
           PARAMSTORE,
@@ -115,6 +128,8 @@ export class SlickApp {
           }
         });
       } else {
+
+        
         let [, viewInfo] = match;
 
         const ControllerConstructor = viewInfo.controller;
@@ -232,7 +247,7 @@ export class SlickApp {
 
         const path = viewSettings.path;
         const method = viewSettings.method;
-        const fullUrl = urlJoin(route, path).replace(/\/$/, "");
+        const fullUrl = urlJoin(route, path).replace(/\/$/, "") || "/";
         
         return {
           controller,

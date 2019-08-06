@@ -23,13 +23,13 @@ export function Module(config: IModuleConfig) {
                 if (check.IsProvider(provider)) {
                     if (check.isObjectProvider(provider)) {
                         if (check.IsUseClass(provider)) {
-                            builder.bind(provider.provide)
+                            builder.bind(provider)
                         }
                         else if (check.IsUseValue(provider)) {
-                            builder.bind(provider.provide)
+                            builder.bind(provider)
                         }
                         else if (check.IsUseFactory(provider)) {
-                            builder.bind(provider.provide)
+                            builder.bind(provider)
                         }
                     }
                     else if (check.IsConstructor(provider)) {
