@@ -29,8 +29,10 @@ export const QueryProvider = {
 export const HistoryProvider = {
     provide:HistoryService,
     useFactory(){
-        get(historyStore)
-    }
+        return get(historyStore)
+    },
+    scope:"Request"
+
 }
 
 
