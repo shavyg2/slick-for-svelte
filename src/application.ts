@@ -92,6 +92,11 @@ export class SlickApp {
 
     this.history.listen(async (location, action) => {
 
+      const pageRoute = urlJoin(
+        "/",
+        location.pathname,
+        location.search
+      );
 
       const pageURL = urlJoin(
         "/",
@@ -106,8 +111,7 @@ export class SlickApp {
       
       let param: any;
       const match = urlPathReference.find(([route]) => {
-    
-        param = route.match(pageURL.trim() || "/");
+        param = route.match(pageRoute.trim() || "/");
         return param;
       });
 
