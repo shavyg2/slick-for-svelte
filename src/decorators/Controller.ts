@@ -1,7 +1,8 @@
 import { Class } from "utility-types";
 import { injectable } from "inversify";
-import { INJECT_CONSTRUCT, CONTROLLER_PATH, INJECT_OPTIONS } from "../types/constants";
+import { INJECT_CONSTRUCT, CONTROLLER_PATH, INJECT_OPTIONS, PARAMETER } from "../types/constants";
 import { ControllerOptions } from "../types/ControllerOptions";
+import { Design } from "../container/builder/design";
 
 
 export function Controller(path: string = "/",options?:ControllerOptions) {
@@ -11,6 +12,21 @@ export function Controller(path: string = "/",options?:ControllerOptions) {
         if(options){
             Reflect.defineMetadata(INJECT_OPTIONS,options,constructor);
         }
+
+        let inject = Reflect.getMetadata(Design.Parameters,constructor) || [];
+
+
+        inject = inject.map((x,index)=>{
+            return {
+                index,
+                identifier:x
+            }
+        })
+
+        Reflect.defineMetadata(PARAMETER,inject,constructor);
+
+ 
+
         return constructor;
     };
 }

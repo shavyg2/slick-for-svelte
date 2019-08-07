@@ -15,7 +15,7 @@ export const MODULE_OPTIONS = Symbol.for("module-options");
 
 export const MODULE = Symbol.for("module");
 
-export const PARAMETER = Symbol.for("parameter")
+export const PARAMETER = "design:slick-for:parameter"
 
 export const VIEW = Symbol.for("view");
 

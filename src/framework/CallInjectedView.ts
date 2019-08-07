@@ -3,7 +3,7 @@ import { MODULE, VIEW, PARAMETER } from "../types/constants";
 
 
 export function CallInjectedView(target: any, key: string) {
-    
+
     let method = target[key];
     let constructor = Object.getPrototypeOf(target).constructor;
 

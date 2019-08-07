@@ -47,7 +47,6 @@ export class SlickApp {
   }
 
   Initialize() {
-    
     this.compile();
     this.start();
   }
@@ -59,20 +58,17 @@ export class SlickApp {
   }
 
   private start() {
-    
     const init = urlJoin(window.location.pathname, window.location.search);
     this.history.push(init);
   }
 
   private GetAppConfiguration() {
-    
     const routeDetail = this.controllers.map(Controller => {
       return this.getControllerRouteDetail(Controller);
     });
     const RouteNavigation = this.getViewNavigation(routeDetail);
 
     let UrlCompass = RouteNavigation.map(navigation => {
-      
       const search = new RouteParser(navigation.url);
       return [search, navigation] as const;
     });
@@ -80,35 +76,39 @@ export class SlickApp {
   }
 
   private boot(urlPathReference: UrlPathReference) {
-    const Application = new this.base({
-      target: this.target,
-      props: {
-        URLSTORE,
-        PARAMSTORE,
-        QUERYSTORE,
-        viewProps: {}
-      }
-    });
+    const  CreateApplication = (viewProps:any = {})=>{
+      return new this.base({
+        target: this.target,
+        props: {
+          URLSTORE,
+          PARAMSTORE,
+          QUERYSTORE,
+          viewProps
+        }
+      });
+    }
+
+
+
+    let Application = CreateApplication()
+
+
+
 
     this.history.listen(async (location, action) => {
-
-      const pageRoute = urlJoin(
-        "/",
-        location.pathname,
-        location.search
-      );
+      const pageRoute = urlJoin("/", location.pathname, location.search);
 
       const pageURL = urlJoin(
         "/",
         location.pathname,
         location.search,
         location.hash
-        );
-        
+      );
+
       console.info(`page navigation "${pageURL}"`);
-      
 
       
+
       let param: any;
       const match = urlPathReference.find(([route]) => {
         param = route.match(pageRoute.trim() || "/");
@@ -117,13 +117,11 @@ export class SlickApp {
 
       QUERYSTORE.update(() => queryString.parse(location.search));
       PARAMSTORE.update(() => param);
-      URLSTORE.update(()=>pageURL)
+      URLSTORE.update(() => pageURL);
 
       await tick();
-      
-      if (!match) {
 
-        
+      if (!match) {
         Application.$set({
           URLSTORE,
           PARAMSTORE,
@@ -132,15 +130,13 @@ export class SlickApp {
           }
         });
       } else {
-
-        
         let [, viewInfo] = match;
 
         const ControllerConstructor = viewInfo.controller;
         const controllerInstance = await CallInjectedController(
           ControllerConstructor
         );
-        
+
         const viewProps = this.getViewProps(controllerInstance, viewInfo);
         const view = this.getView(ControllerConstructor, viewInfo);
 
@@ -172,10 +168,18 @@ export class SlickApp {
         const backup = Object.assign({}, templateProps);
         promiseAny([
           viewProps,
-          new Promise(r => setTimeout(r, viewOptions.pause!=void 0?viewOptions.pause:400))
+          new Promise(r =>
+            setTimeout(r, viewOptions.pause != void 0 ? viewOptions.pause : 400)
+          )
         ])
-          .then(() => {
-            Application.$set(templateProps);
+          .then(async () => {
+            
+            try{
+              Application.$destroy();
+              Application = CreateApplication()
+              Application.$set(templateProps);
+            }catch(e){
+            }
           })
           .catch(e => {
             Object.assign(backup, {
@@ -252,7 +256,7 @@ export class SlickApp {
         const path = viewSettings.path;
         const method = viewSettings.method;
         const fullUrl = urlJoin(route, path).replace(/\/$/, "") || "/";
-        
+
         return {
           controller,
           method: method,

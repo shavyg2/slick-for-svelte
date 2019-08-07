@@ -3,8 +3,12 @@ import { IConstructor } from "../builder/IConstructor";
 import { PARAMETER, INJECT_OPTIONS } from "../../types/constants";
 import { SCOPE } from "../Provider";
 export function ProviderFromConstructor(constructor: IConstructor) {
+
   const inject = Reflect.getMetadata(Design.Constructor, constructor) || [];
-  const alter = Reflect.getMetadata(PARAMETER, constructor);
+  const alter = Reflect.getMetadata(PARAMETER, constructor) || [];
+
+  
+  
 
   if (alter) {
     alter.forEach(({ index, identifier }) => {

@@ -3,7 +3,6 @@ import { ParamService, QueryService, HistoryService } from "../provider/provider
 
 export function Inject(identifier:any,action=x=>x){
     return (target,method,parameterIndex)=>{
-       
         target = method? target.constructor: target;
         let params = Reflect.getMetadata(PARAMETER,target,method) || []
         params.push({
