@@ -1,5 +1,3 @@
-
-import {History} from "history";
 import {get} from "svelte/store";
 
 import { historyStore } from "../stores/history";

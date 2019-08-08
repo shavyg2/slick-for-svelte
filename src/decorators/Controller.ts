@@ -1,6 +1,5 @@
 import { Class } from "utility-types";
-import { injectable } from "inversify";
-import { INJECT_CONSTRUCT, CONTROLLER_PATH, INJECT_OPTIONS, PARAMETER } from "../types/constants";
+import {  CONTROLLER_PATH, INJECT_OPTIONS, PARAMETER } from "../types/constants";
 import { ControllerOptions } from "../types/ControllerOptions";
 import { Design } from "../container/builder/design";
 
@@ -24,9 +23,6 @@ export function Controller(path: string = "/",options?:ControllerOptions) {
         })
 
         Reflect.defineMetadata(PARAMETER,inject,constructor);
-
- 
-
         return constructor;
     };
 }
