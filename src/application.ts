@@ -17,7 +17,7 @@ import queryString from "query-string";
 import promiseAny from "promise-any";
 import { Container } from "./container/builder/Container";
 import { historyStore } from "./stores/history";
-import { tick } from "svelte";
+import { StoreUpdater } from "./stores/storeupdator";
 
 type UrlPathReference = (readonly [
   RouteParser<{
@@ -50,7 +50,6 @@ export class SlickApp {
     this.compile();
     this.start();
   }
-
   compile() {
     let UrlConfiguration = this.GetAppConfiguration();
     this.boot(UrlConfiguration);
@@ -88,14 +87,11 @@ export class SlickApp {
       });
     }
 
-
-
     let Application = CreateApplication()
 
-
-
-
     this.history.listen(async (location, action) => {
+
+      //create page routes
       const pageRoute = urlJoin("/", location.pathname, location.search);
 
       const pageURL = urlJoin(
@@ -105,9 +101,6 @@ export class SlickApp {
         location.hash
       );
 
-      console.info(`page navigation "${pageURL}"`);
-
-      
 
       let param: any;
       const match = urlPathReference.find(([route]) => {
@@ -115,11 +108,13 @@ export class SlickApp {
         return param;
       });
 
-      QUERYSTORE.update(() => queryString.parse(location.search));
-      PARAMSTORE.update(() => param);
-      URLSTORE.update(() => pageURL);
 
-      await tick();
+      StoreUpdater.set().all({
+        url:pageURL,
+        param,
+        query:queryString.parse(location.search)
+      })
+
 
       if (!match) {
         Application.$set({
