@@ -12,7 +12,6 @@ export class SlickForSvelteFactory{
             app,
             options
         )
-
         return App;
     }
 }
