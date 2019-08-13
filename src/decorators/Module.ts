@@ -9,7 +9,6 @@ export function Module(config: IModuleConfig) {
 
         var builder = new ContainerBuilder()
         const container = ContainerBuilder.getContainer(builder);
-        //TODO add module to children
         Reflect.defineMetadata(MODULE_OPTIONS, config, constructor);
         Reflect.defineMetadata(MODULE, container, constructor);
         if (config.controllers) {
