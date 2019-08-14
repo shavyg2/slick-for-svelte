@@ -76,7 +76,7 @@ export class SlickApp {
 
   private boot(urlPathReference: UrlPathReference) {
     const  CreateApplication = (viewProps:any = {})=>{
-      return new this.base({
+      let view =  new this.base({
         target: this.target,
         props: {
           URLSTORE,
@@ -85,6 +85,10 @@ export class SlickApp {
           viewProps
         }
       });
+      view.$on((event,data)=>{
+        console.log(event,data);
+      })
+      return view;
     }
 
     let Application = CreateApplication()
