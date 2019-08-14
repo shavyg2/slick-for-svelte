@@ -85,9 +85,6 @@ export class SlickApp {
           viewProps
         }
       });
-      view.$on((event,data)=>{
-        console.log(event,data);
-      })
       return view;
     }
 

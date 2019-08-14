@@ -41,7 +41,6 @@ export function Module(config: IModuleConfig) {
             });
 
             ApplicationProviders.forEach(provider=>{
-                
                 builder.add(provider)
             })
             return constructor;
