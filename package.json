@@ -9,6 +9,7 @@
     "@types/url-join": "^4.0.0",
     "get-port": "^5.0.0",
     "history": "^4.9.0",
+    "install-peers": "^1.0.3",
     "jest": "^24.8.0",
     "parcel": "^1.12.3",
     "puppeteer": "^1.19.0",

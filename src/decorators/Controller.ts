@@ -4,7 +4,7 @@ import { ControllerOptions } from "../types/ControllerOptions";
 import { Design } from "../container/builder/design";
 
 
-export function Controller(path: string = "/",options?:ControllerOptions) {
+export function Controller(path: string = "/",options:ControllerOptions={}) {
     path = path === ""? "/":path
     return (constructor: Class<any>) => {
         Reflect.defineMetadata(CONTROLLER_PATH, path, constructor);
