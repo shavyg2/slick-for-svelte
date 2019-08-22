@@ -1,17 +1,17 @@
-let ErrorPage = require("../template/error.svelte");
 const Template = require("../template/base.svelte");
 const NotFound = require("../template/404.svelte");
-import * as History from "history";
+const ErrorPage = require("../template/error.svelte");
 import "../dom";
+import * as History from "history";
 
 
 
 
 
-import { Module } from "../../src/decorators";
-import { SlickForSvelteFactory } from "../../src/slick-for-svelte-factory";
+
 import { User } from "./User";
 import { FooProvider } from "./foo";
+import { Module, SlickForSvelteFactory } from "../../src/slick-for-svelte-factory";
 
 
 @Module({

@@ -1,6 +1,6 @@
 const Page1 = require("../view/page1.svelte");
 const ParamPage = require("../view/param.svelte")
-import { Controller, Inject, View, Param, Query } from "../../src/decorators";
+import { Controller, Inject, View, Param, Query } from "../../src/slick-for-svelte-factory";
 
 import { foo } from "./foo";
 

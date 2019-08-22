@@ -1,5 +1,4 @@
 require("svelte/register");
-import { tick } from "svelte";
 import { select } from "./dom";
 import "./application/test.app";
 import { history } from "./application/test.app";
@@ -46,6 +45,4 @@ describe("Framework Test",()=>{
         let pre = select("pre")
         expect(/This is intentional/.test(pre.innerHTML)).toBeTruthy();
     })
-
-
 })
