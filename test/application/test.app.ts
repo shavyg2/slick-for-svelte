@@ -12,11 +12,12 @@ import * as History from "history";
 import { User } from "./User";
 import { FooProvider } from "./foo";
 import { Module, SlickForSvelteFactory } from "../../src/slick-for-svelte-factory";
+import { FrameworkMeta } from "./FrameworkMeta";
 
 
 @Module({
     controllers:[User],
-    provider:[FooProvider]
+    provider:[FooProvider,FrameworkMeta]
 })
 class Application{
 

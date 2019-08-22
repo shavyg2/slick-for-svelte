@@ -37,6 +37,14 @@ describe("Framework Test",()=>{
     })
 
 
+    it("it should be able to get the param from an async controller method",async()=>{
+        history.push("/meta")
+        await Tock();
+        let div = select("div")
+        expect(div.innerHTML).toBe("@slick-for/svelte");
+    })
+
+
     it("Throw an Error on purpose",async()=>{
         history.push("/error")
         await Tock();

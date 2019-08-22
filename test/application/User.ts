@@ -1,15 +1,19 @@
 const Page1 = require("../view/page1.svelte");
 const ParamPage = require("../view/param.svelte")
+const Framename = require("../view/class-constructor.svelte")
 import { Controller, Inject, View, Param, Query } from "../../src/slick-for-svelte-factory";
 
 import { foo } from "./foo";
+import { FrameworkMeta } from "./FrameworkMeta";
+
 
 
 @Controller("/")
 export class User {
     constructor(
         @Inject(foo)
-        public foo: string) {
+        public foo: string,
+        private framework:FrameworkMeta) {
     }
     @View("/", Page1)
     page() {
@@ -30,6 +34,14 @@ export class User {
         return {
             name,
             page
+        }
+    }
+
+
+    @View("/meta",Framename)
+    withClassConstructor(){
+        return {
+            name:this.framework.getName(),
         }
     }
 

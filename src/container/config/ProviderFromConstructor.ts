@@ -4,7 +4,7 @@ import { PARAMETER, INJECT_OPTIONS } from "../../types/constants";
 import { SCOPE } from "../SCOPE";
 export function ProviderFromConstructor(constructor: IConstructor) {
 
-  const inject = Reflect.getMetadata(Design.Constructor, constructor) || [];
+  const inject = Reflect.getMetadata(Design.Parameters, constructor) || [];
   const alter = Reflect.getMetadata(PARAMETER, constructor) || [];
 
   
