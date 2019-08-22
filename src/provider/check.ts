@@ -1,8 +1,7 @@
-
-import isObject from "isobject";
+import is from "@sindresorhus/is"
 
 export function IsProvider(provider:any){
-    return (isObject(provider) && isObjectProvider(provider)) || IsConstructor(provider);
+    return (is.object(provider) && isObjectProvider(provider)) || IsConstructor(provider);
 }
 
 export function IsConstructor(provider:any){

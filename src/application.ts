@@ -8,16 +8,18 @@ import { IModuleConfig } from "./types/IModuleConfig";
 import { History } from "history";
 import { URLSTORE, PARAMSTORE, QUERYSTORE } from "./stores/main";
 import RouteParser from "route-parser";
-import urlJoin from "url-join";
 import { RouteDetails } from "./types/RouteDetails";
 import { ViewDetails } from "./types/ViewDetails";
 import { CallInjectedView } from "./framework/CallInjectedView";
 import { CallInjectedController } from "./framework/CallInjectedController";
 import queryString from "query-string";
-import promiseAny from "promise-any";
+
 import { Container } from "./container/builder/Container";
 import { historyStore } from "./stores/history";
 import { StoreUpdater } from "./stores/storeupdator";
+import { setTock } from "./framework/tock";
+import { promiseAny } from "./helpers/promise-any";
+import { urlJoin } from "./helpers/url-join";
 
 type UrlPathReference = (readonly [
   RouteParser<{
@@ -90,7 +92,14 @@ export class SlickApp {
 
     let Application = CreateApplication()
 
-    this.history.listen(async (location, action) => {
+    this.history.listen((location, action) => {
+
+      let tockTicker;
+      const tocker = new Promise((r)=>{
+        tockTicker = r;
+      })
+
+      setTock(tocker);
 
       //create page routes
       const pageRoute = urlJoin("/", location.pathname, location.search);
@@ -125,15 +134,18 @@ export class SlickApp {
             NotFound: this.Component404
           }
         });
+        tockTicker();
       } else {
         let [, viewInfo] = match;
 
         const ControllerConstructor = viewInfo.controller;
-        const controllerInstance = await CallInjectedController(
+        const controllerInstance = CallInjectedController(
           ControllerConstructor
         );
 
-        const viewProps = this.getViewProps(controllerInstance, viewInfo);
+        const viewProps = this.getViewProps(controllerInstance, viewInfo).then(x=>{
+          return x || {};
+        });
         const view = this.getView(ControllerConstructor, viewInfo);
 
         const templateProps: any = {};
@@ -171,10 +183,18 @@ export class SlickApp {
           .then(async () => {
             
             try{
-              Application.$destroy();
-              Application = CreateApplication()
-              Application.$set(templateProps);
+              await Application.$set(templateProps);
+              tockTicker();
             }catch(e){
+              try{
+                Application.$destroy();
+                Application = CreateApplication();
+                await Application.$set(templateProps);
+                tockTicker();
+              }catch(e){
+                tockTicker();
+
+              }
             }
           })
           .catch(e => {
@@ -182,6 +202,7 @@ export class SlickApp {
               viewProps: Promise.resolve(Promise.reject(e))
             });
             Application.$set(backup);
+            tockTicker();
           });
       }
     });

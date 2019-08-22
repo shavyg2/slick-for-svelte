@@ -1,4 +1,4 @@
-import { Class } from "utility-types";
+
 import {  CONTROLLER_PATH, INJECT_OPTIONS, PARAMETER } from "../types/constants";
 import { ControllerOptions } from "../types/ControllerOptions";
 import { Design } from "../container/builder/design";
@@ -6,7 +6,7 @@ import { Design } from "../container/builder/design";
 
 export function Controller(path: string = "/",options:ControllerOptions={}) {
     path = path === ""? "/":path
-    return (constructor: Class<any>) => {
+    return (constructor: any) => {
         Reflect.defineMetadata(CONTROLLER_PATH, path, constructor);
         if(options){
             Reflect.defineMetadata(INJECT_OPTIONS,options,constructor);
@@ -22,7 +22,7 @@ export function Controller(path: string = "/",options:ControllerOptions={}) {
             }
         })
 
-        Reflect.defineMetadata(PARAMETER,inject,constructor);
+        //Reflect.defineMetadata(PARAMETER,inject,constructor);
         return constructor;
     };
 }

@@ -1,7 +1,9 @@
-import { FactoryProvider, SCOPE } from "../Provider";
-import uuid from "uuid/v4";
-import isPromise from "is-promise";
+import { FactoryProvider } from "../Provider";
+import { SCOPE } from "../SCOPE";
+// import uuid from "uuid/v4";
+import is from "@sindresorhus/is"
 import { IContainer } from "./IContainer";
+import { makeid } from "../../helpers/generate_id";
 
 export type Scope = "Request" | "Transient" | "Singleton";
 
@@ -17,12 +19,12 @@ export class Container implements IContainer {
   }
 
   get<T = any>(identifier: any): T | PromiseLike<T> {
-    let id = uuid();
+    let id = makeid();
     this.cache.Request.set(id, new Map());
     let build = this.build(identifier, id);
 
-    if (isPromise(build)) {
-      return build.then(instance => {
+    if (is.promise(build)) {
+      return build.then((instance:any) => {
         this.cache.Request.delete(id);
         return instance;
       });
@@ -78,7 +80,7 @@ export class Container implements IContainer {
         return this.build(x, requestID);
       });
 
-      if (dependencies.some(isPromise)) {
+      if (dependencies.some(is.promise)) {
         return Promise.all(dependencies.map(x => Promise.resolve(x)))
           .then(args => {
             return provider.useFactory(...args);
@@ -105,7 +107,7 @@ export class Container implements IContainer {
         return this.build(x, requestID);
       });
 
-      if (dependencies.some(isPromise)) {
+      if (dependencies.some(is.promise)) {
         return Promise.all(dependencies.map(x => Promise.resolve(x)))
           .then(args => {
             return provider.useFactory(...args);
@@ -127,7 +129,7 @@ export class Container implements IContainer {
       return this.build(x, requestID);
     });
 
-    if (dependencies.some(isPromise)) {
+    if (dependencies.some(is.promise)) {
       return Promise.all(dependencies.map(x => Promise.resolve(x)))
         .then(args => {
           return provider.useFactory(...args);

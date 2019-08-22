@@ -1,10 +1,4 @@
 
-export const SCOPE = {
-    Request:"Request" as const,
-    Singleton:"Singleton" as const,
-    Transient:"Transient" as const
-}
-
 export interface ValueProvider {
     scope?:"Request" | "Singleton" | "Transient"
     provide:any;

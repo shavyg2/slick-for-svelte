@@ -1,11 +1,11 @@
-import { Class } from "utility-types";
+
 import { IModuleConfig } from "../types/IModuleConfig";
 import { MODULE_OPTIONS, MODULE } from "../types/constants";
 import * as check from "../provider/check";
 import { ContainerBuilder } from "../container/config/ContainerBuilder";
 import { ApplicationProviders } from "../provider/defaultProviders";
 export function Module(config: IModuleConfig) {
-    return (constructor: Class<any>) => {
+    return (constructor: any) => {
 
         var builder = new ContainerBuilder()
         const container = ContainerBuilder.getContainer(builder);

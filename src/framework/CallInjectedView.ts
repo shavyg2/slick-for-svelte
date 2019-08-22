@@ -1,4 +1,5 @@
-import isPromise from "is-promise";
+
+import is from "@sindresorhus/is"
 import { MODULE, VIEW, PARAMETER } from "../types/constants";
 
 
@@ -26,7 +27,7 @@ export function CallInjectedView(target: any, key: string) {
             throw new Error(`Can't resolve parameter [${index}] of ${constructor.name}:${key}`);
         }
     });
-    if (dependencies.some(isPromise)) {
+    if (dependencies.some(is.promise)) {
         return Promise.all(dependencies).then(args => {
             
             return method.apply(target, PerformParameterAction(args,params));
