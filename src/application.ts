@@ -90,7 +90,7 @@ export class SlickApp {
 
     let Application = CreateApplication()
 
-    this.history.listen(async (location, action) => {
+    this.history.listen((location, action) => {
 
       //create page routes
       const pageRoute = urlJoin("/", location.pathname, location.search);
@@ -129,7 +129,7 @@ export class SlickApp {
         let [, viewInfo] = match;
 
         const ControllerConstructor = viewInfo.controller;
-        const controllerInstance = await CallInjectedController(
+        const controllerInstance = CallInjectedController(
           ControllerConstructor
         );
 

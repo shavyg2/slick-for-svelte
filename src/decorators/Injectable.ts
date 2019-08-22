@@ -1,6 +1,6 @@
 import { INJECT_OPTIONS } from "../types/constants";
 import { ScopeOptions } from "../types/ControllerOptions";
-import { SCOPE } from "../container/Provider";
+import { SCOPE } from "../container/SCOPE";
 import { Design } from "../container/builder/design";
 
 export function Injectable(options:ScopeOptions = {scope:SCOPE.Singleton}){

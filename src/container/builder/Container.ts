@@ -1,4 +1,5 @@
-import { FactoryProvider, SCOPE } from "../Provider";
+import { FactoryProvider } from "../Provider";
+import { SCOPE } from "../SCOPE";
 import uuid from "uuid/v4";
 import isPromise from "is-promise";
 import { IContainer } from "./IContainer";

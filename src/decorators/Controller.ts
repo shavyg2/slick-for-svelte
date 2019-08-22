@@ -22,7 +22,7 @@ export function Controller(path: string = "/",options:ControllerOptions={}) {
             }
         })
 
-        Reflect.defineMetadata(PARAMETER,inject,constructor);
+        //Reflect.defineMetadata(PARAMETER,inject,constructor);
         return constructor;
     };
 }
