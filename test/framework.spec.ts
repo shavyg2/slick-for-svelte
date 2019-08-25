@@ -37,7 +37,7 @@ describe("Framework Test",()=>{
     })
 
 
-    it("it should be able to get the param from an async controller method",async()=>{
+    it("it should be able to get the param from a constructor class",async()=>{
         history.push("/meta")
         await Tock();
         let div = select("div")
@@ -52,5 +52,21 @@ describe("Framework Test",()=>{
         expect(div.innerHTML).toBe("Error");
         let pre = select("pre")
         expect(/This is intentional/.test(pre.innerHTML)).toBeTruthy();
+    })
+
+
+    it("should load factory providers",async ()=>{
+        history.push("/controller/factory/inject")
+        await Tock();
+        const div = select("div")
+        expect(div.innerHTML).toBe("New Factory");
+    })
+
+
+    it("should load async factory providers",async ()=>{
+        history.push("/controller/factory/async")
+        await Tock();
+        const div = select("div")
+        expect(div.innerHTML).toBe("New Factory");
     })
 })

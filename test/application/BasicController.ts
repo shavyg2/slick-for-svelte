@@ -9,7 +9,7 @@ import { FrameworkMeta } from "./FrameworkMeta";
 
 
 @Controller("/")
-export class User {
+export class BasicController {
     constructor(
         @Inject(foo)
         public foo: string,
