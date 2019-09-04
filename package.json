@@ -1,6 +1,6 @@
 {
   "name": "@slick-for/svelte",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A Framework for Stitching together sick svelte Applications",
   "license": "MIT",
   "repository": {
