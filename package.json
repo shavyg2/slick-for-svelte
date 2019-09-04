@@ -23,7 +23,8 @@
   ],
   "main": "dist/src/slick-for-svelte-factory.js",
   "scripts": {
-    "test": "echo \"No Test\""
+    "test": "echo \"No Test\"",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "@sindresorhus/is": "^1.0.0",
