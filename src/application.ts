@@ -19,7 +19,7 @@ import queryString from "query-string";
 import { Container } from "./container/builder/Container";
 import { historyStore } from "./stores/history";
 import { StoreUpdater } from "./stores/storeupdator";
-import { setTock } from "./framework/tock";
+import { setTock, Tock } from "./framework/tock";
 import { promiseAny } from "./helpers/promise-any";
 import { urlJoin } from "./helpers/url-join";
 
@@ -96,8 +96,8 @@ export class SlickApp {
 
     let Application = CreateApplication()
 
-    this.history.listen((location, action) => {
-
+    this.history.listen(async (location, action) => {
+      await Tock();
       let tockTicker;
       const tocker = new Promise(async (r)=>{
         tockTicker = r;
