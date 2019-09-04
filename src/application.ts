@@ -147,10 +147,6 @@ export class SlickApp {
           ControllerConstructor
         );
 
-
-        //TODO: layout props
-        debugger;
-
         const layoutPropsMethod = Reflect.getMetadata(LAYOUT_PROP,ControllerConstructor)
         let layoutProps = is.string(layoutPropsMethod)? this.getLayoutProps(controllerInstance,layoutPropsMethod): {};
 
