@@ -69,4 +69,19 @@ describe("Framework Test",()=>{
         const div = select("div")
         expect(div.innerHTML).toBe("New Factory");
     })
+
+
+    it("should load layout props using the layout props decorator",async ()=>{
+        history.push("/layout/props")
+        await Tock();
+        
+        debugger;
+        const user = select("#user-menu")
+        const date = select("#date")
+
+
+
+        expect(user.innerHTML).toBe("bob");
+        expect(date.innerHTML).toBe("Good Day");
+    })
 })

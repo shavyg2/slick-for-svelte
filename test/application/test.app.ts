@@ -9,10 +9,11 @@ import { FooProvider } from "./foo";
 import { Module, SlickForSvelteFactory } from "../../src/slick-for-svelte-factory";
 import { FrameworkMeta } from "./FrameworkMeta";
 import { FactoryController, FactoryProvider } from "./FactoryController";
+import { LayoutPropController } from "./LayoutPropController";
 
 
 @Module({
-    controllers: [BasicController, FactoryController],
+    controllers: [BasicController, FactoryController,LayoutPropController],
     provider: [FooProvider, FrameworkMeta, FactoryProvider]
 })
 class Application {
@@ -25,7 +26,6 @@ export const history = History.createMemoryHistory()
 
 
 const app = SlickForSvelteFactory.create(Application, {
-    base: Template,
     component404: NotFound,
     target: document.body,
     error: ErrorPage,

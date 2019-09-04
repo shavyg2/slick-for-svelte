@@ -17,6 +17,8 @@ export const MODULE = Symbol.for("module");
 
 export const PARAMETER = "design:slick-for:parameter"
 
+export const LAYOUT_PROP = "design:slick-for:layout-props"
+
 export const VIEW = Symbol.for("view");
 
 export const VIEW_PATH = Symbol.for("view_path");

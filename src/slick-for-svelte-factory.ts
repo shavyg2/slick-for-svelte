@@ -7,8 +7,11 @@ export * from "./stores/main";
 export * from "./helpers/spa";
 export * from "./helpers/history"
 export {Tock} from "./framework/tock";
+const defaultBase = require("../test/template/base.svelte")
 export class SlickForSvelteFactory{
     static create(app:any,options:ModuleInitOptions){
+
+        options.base = options.base || defaultBase
         const App = InitModule(
             app,
             options

@@ -2,7 +2,8 @@ import {
   CONTROLLER_PATH,
   VIEW_PATH,
   INJECT_OPTIONS,
-  VIEW_COMPONENT
+  VIEW_COMPONENT,
+  LAYOUT_PROP
 } from "./types/constants";
 import { IModuleConfig } from "./types/IModuleConfig";
 import { History } from "history";
@@ -12,6 +13,7 @@ import { RouteDetails } from "./types/RouteDetails";
 import { ViewDetails } from "./types/ViewDetails";
 import { CallInjectedView } from "./framework/CallInjectedView";
 import { CallInjectedController } from "./framework/CallInjectedController";
+import is from "@sindresorhus/is";
 import queryString from "query-string";
 
 import { Container } from "./container/builder/Container";
@@ -20,6 +22,8 @@ import { StoreUpdater } from "./stores/storeupdator";
 import { setTock } from "./framework/tock";
 import { promiseAny } from "./helpers/promise-any";
 import { urlJoin } from "./helpers/url-join";
+
+
 
 type UrlPathReference = (readonly [
   RouteParser<{
@@ -95,7 +99,7 @@ export class SlickApp {
     this.history.listen((location, action) => {
 
       let tockTicker;
-      const tocker = new Promise((r)=>{
+      const tocker = new Promise(async (r)=>{
         tockTicker = r;
       })
 
@@ -143,18 +147,28 @@ export class SlickApp {
           ControllerConstructor
         );
 
+
+        //TODO: layout props
+        debugger;
+
+        const layoutPropsMethod = Reflect.getMetadata(LAYOUT_PROP,ControllerConstructor)
+        let layoutProps = is.string(layoutPropsMethod)? this.getLayoutProps(controllerInstance,layoutPropsMethod): {};
+
         const viewProps = this.getViewProps(controllerInstance, viewInfo).then(x=>{
           return x || {};
         });
-        const view = this.getView(ControllerConstructor, viewInfo);
+
+        const viewComponent = this.getViewComponent(ControllerConstructor, viewInfo);
 
         const templateProps: any = {};
-        const viewOptions = this.getViewOptions(viewInfo);
+        const viewOptions = this.getControllerOptions(viewInfo);
 
         if (viewOptions) {
+          //Need to remove this
           if ("layout" in viewOptions) {
             Object.assign(templateProps, { layout: viewOptions.layout });
           }
+          //need to remove this
           if ("loading" in viewOptions) {
             Object.assign(templateProps, { loading: viewOptions.loading });
           }
@@ -169,7 +183,8 @@ export class SlickApp {
         Object.assign(templateProps, {
           URLSTORE,
           PARAMSTORE,
-          view
+          layout_props:layoutProps,
+          view: viewComponent
         });
 
         Object.assign(templateProps, { viewProps });
@@ -198,6 +213,7 @@ export class SlickApp {
             }
           })
           .catch(e => {
+            console.error(e);
             Object.assign(backup, {
               viewProps: Promise.resolve(Promise.reject(e))
             });
@@ -208,7 +224,7 @@ export class SlickApp {
     });
   }
 
-  private getViewOptions(ViewActionDetail: {
+  private getControllerOptions(ViewActionDetail: {
     controller: any;
     method: string;
     route: string;
@@ -218,7 +234,7 @@ export class SlickApp {
     return getMetaData(INJECT_OPTIONS, ViewActionDetail.controller) || {};
   }
 
-  private getView(
+  private getViewComponent(
     controller: any,
     ViewActionDetail: {
       controller: any;
@@ -237,6 +253,18 @@ export class SlickApp {
     return view;
   }
 
+  private getLayoutProps(
+    Controller: any,
+    method
+  ) {
+    try {
+      return Promise.resolve(
+        CallInjectedView(Controller, method)
+      );
+    } catch (e) {
+      return Promise.resolve(Promise.reject(e));
+    }
+  }
   private getViewProps(
     Controller: any,
     ViewActionDetail: {
