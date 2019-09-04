@@ -81,7 +81,7 @@ describe("Framework Test",()=>{
 
 
 
-        expect(user.innerHTML).toBe("bob");
+        expect(user.innerHTML).toBe("foo");
         expect(date.innerHTML).toBe("Good Day");
     })
 })
